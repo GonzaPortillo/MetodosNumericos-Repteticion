@@ -224,6 +224,6 @@ Resultado esperado: Raíz ≈ 1.5213797
 
 
 ## Ejemplos en codigo Java
-## Biseccion
+### Biseccion
 
-1. 
+1. [Ejemplo 1]([https://github.com/GonzaPortillo/Metodos-numericos-Tema-6-Completo/blob/main/README.md#introduccion-a-metodos-numericos](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema2/Biseccion/Ejemplo1.java))
