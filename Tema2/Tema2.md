@@ -39,6 +39,8 @@ Los metodos que veremos en esta ocacion son:
 
 ## Pseudocodigos
 
+### Biseccion
+
     Función f(x):
       Retornar x^3 - x - 2
 
@@ -59,4 +61,109 @@ Los metodos que veremos en esta ocacion son:
             a ← c
 
     Retornar c
+
+### Regla falsa
+
+    Función f(x):
+        Retornar x^2 - 4
+
+    Función ReglaFalsa(a, b, tolerancia, maxIteraciones):
+        fa ← f(a)
+        fb ← f(b)
+
+        Si fa * fb > 0:
+            Mostrar "La función no cambia de signo en el intervalo"
+            Retornar NaN
+
+        Repetir hasta maxIteraciones:
+            c ← b - fb * (b - a) / (fb - fa)
+            fc ← f(c)
+
+            Si |fc| < tolerancia:
+                Mostrar "Raíz encontrada: c"
+                Retornar c
+
+            Si fa * fc < 0:
+                b ← c
+                fb ← fc
+            Sino:
+                a ← c
+                fa ← fc
+
+        Mostrar "No se encontró la raíz después de maxIteraciones iteraciones"
+        Retornar c
+
+### Secante
+
+    Función f(x):
+        Retornar x^3 - x^2 + 2
+
+    Función MetodoSecante(x0, x1, tolerancia, maxIteraciones):
+        f0 ← f(x0)
+        f1 ← f(x1)
+        iteraciones ← 0
+
+        Mientras |f1| > tolerancia y iteraciones < maxIteraciones:
+            x2 ← x1 - f1 * (x1 - x0) / (f1 - f0)
+            x0 ← x1
+            f0 ← f1
+            x1 ← x2
+            f1 ← f(x1)
+            iteraciones ← iteraciones + 1
+
+        Si iteraciones ≥ maxIteraciones:
+            Mostrar "El método no convergió en maxIteraciones iteraciones"
+
+        Retornar x2
+
+### Newton-Raphson
+    Función f(x):
+        Retornar f(x)   // Por ejemplo: x^3 - x - 2
+
+    Función fPrima(x):
+        Retornar derivada de f(x)   // Por ejemplo: 3x^2 - 1
+
+    Función NewtonRaphson(x0, tolerancia, maxIteraciones):
+        iter ← 0
+
+        Repetir mientras iter < maxIteraciones:
+            fx ← f(x0)
+            fpx ← fPrima(x0)
+
+            Si fpx == 0:
+                Mostrar "Derivada cero. Método falló."
+                Retornar NaN
+
+            x1 ← x0 - fx / fpx
+
+            Si |x1 - x0| < tolerancia:
+                Retornar x1
+
+            x0 ← x1
+            iter ← iter + 1
+
+        Mostrar "No se encontró la raíz en el número máximo de iteraciones"
+        Retornar x1
+
+
+### Punto fijo
+
+    Función g(x):
+        Retornar alguna función equivalente a x = g(x)
+        (Ejemplo: g(x) = sqrt(x + 2) si f(x) = x^2 - x - 2)
+
+    Función PuntoFijo(x0, tolerancia, maxIteraciones):
+        iter ← 0
+
+        Repetir mientras iter < maxIteraciones:
+            x1 ← g(x0)
+
+            Si |x1 - x0| < tolerancia:
+                Retornar x1
+
+            x0 ← x1
+            iter ← iter + 1
+
+        Mostrar "No se encontró la raíz en el número máximo de iteraciones"
+        Retornar x1
 
