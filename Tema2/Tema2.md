@@ -176,7 +176,9 @@ Los metodos que veremos en esta ocacion son:
 - Tolerancia: 1e-6
 - Max. iteraciones: 100
 
+
 Resultado esperado: Raíz ≈ 1.5213797
+
 Este caso es clásico para Bisección, ya que f(1) * f(2) < 0 → hay una raíz entre 1 y 2.
 
 ### Regla falsa
