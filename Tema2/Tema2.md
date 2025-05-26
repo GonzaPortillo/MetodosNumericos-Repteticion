@@ -39,3 +39,24 @@ Los metodos que veremos en esta ocacion son:
 
 ## Pseudocodigos
 
+    Función f(x):
+      Retornar x^3 - x - 2
+
+    Función Biseccion(a, b, tolerancia, maxIteraciones):
+      Si f(a) * f(b) ≥ 0:
+        Mostrar "El método de bisección no se puede aplicar"
+        Retornar NaN
+
+      Repetir hasta maxIteraciones:
+        c ← (a + b) / 2
+
+        Si f(c) == 0 ó (b - a) / 2 < tolerancia:
+            Retornar c
+
+        Si f(c) * f(a) < 0:
+            b ← c
+        Sino:
+            a ← c
+
+    Retornar c
+
