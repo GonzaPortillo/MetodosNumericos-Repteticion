@@ -171,6 +171,14 @@ Los metodos que veremos en esta ocacion son:
 ## Casos de prueba
 
 ### Biseccion
+- Función: f(x) = x^3 - x - 2
+- Intervalo: a = 1, b = 2
+- Tolerancia: 1e-6
+- Max. iteraciones: 100
+
+Resultado esperado: Raíz ≈ 1.5213797
+Este caso es clásico para Bisección, ya que f(1) * f(2) < 0 → hay una raíz entre 1 y 2.
+
 ### Regla falsa
 ### Secante
 ### Newton-Raphson
