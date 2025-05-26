@@ -93,6 +93,10 @@ Los metodos que veremos en esta ocacion son:
         Mostrar "No se encontró la raíz después de maxIteraciones iteraciones"
         Retornar c
 
+#### Ejemplos en codigo java
+#### Biseccion
+1. 
+
 ### Secante
 
     Función f(x):
