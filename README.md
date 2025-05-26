@@ -8,3 +8,7 @@ En este repositorio el objetivo es recopilar la mayor parte de informacion acerc
 
   - [Readme Tema 2](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema2/Tema2.md)
   - [Codigos de Biseccion](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/tree/main/Tema2/Biseccion)
+  - [Codigos Regla Falsa]
+  - [Codigos Secante]
+  - [Codigos Punto Fijo]
+  - [Codigos Newton Raphson]
