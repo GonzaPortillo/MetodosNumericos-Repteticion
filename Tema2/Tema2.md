@@ -182,15 +182,25 @@ Resultado esperado: Raíz ≈ 1.5213797
 Este caso es clásico para Bisección, ya que f(1) * f(2) < 0 → hay una raíz entre 1 y 2.
 
 ### Regla falsa
--Función: f(x) = x^2 - 4
--Intervalo: a = 0, b = 3
--Tolerancia: 1e-6
--Max. iteraciones: 100
+- Función: f(x) = x^2 - 4
+- Intervalo: a = 0, b = 3
+- Tolerancia: 1e-6
+- Max. iteraciones: 100
+
 
 Resultado esperado: Raíz ≈ 2
 
 La función cambia de signo entre 0 y 3, y su raíz exacta es x = 2.
 
 ### Secante
+- Función: f(x) = x^3 - x^2 + 2
+- Valores iniciales: x0 = -20, x1 = -10
+- Tolerancia: 1e-6
+- Max. iteraciones: 100
+
+Resultado esperado: No hay raíz real (la función no cruza el eje x), el método probablemente diverge o se detiene por exceso de iteraciones.
+
+Este caso prueba un comportamiento negativo: qué pasa cuando no hay raíz real.
+
 ### Newton-Raphson
 ### Punto fijo
