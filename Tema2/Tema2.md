@@ -182,6 +182,15 @@ Resultado esperado: Raíz ≈ 1.5213797
 Este caso es clásico para Bisección, ya que f(1) * f(2) < 0 → hay una raíz entre 1 y 2.
 
 ### Regla falsa
+-Función: f(x) = x^2 - 4
+-Intervalo: a = 0, b = 3
+-Tolerancia: 1e-6
+-Max. iteraciones: 100
+
+Resultado esperado: Raíz ≈ 2
+
+La función cambia de signo entre 0 y 3, y su raíz exacta es x = 2.
+
 ### Secante
 ### Newton-Raphson
 ### Punto fijo
