@@ -203,4 +203,22 @@ Resultado esperado: No hay raíz real (la función no cruza el eje x), el métod
 Este caso prueba un comportamiento negativo: qué pasa cuando no hay raíz real.
 
 ### Newton-Raphson
+Queremos resolver: f(x) = x^2 - x - 2 = 0
+Reorganizamos: x = g(x) = √(x + 2)
+
+Valor inicial: x0 = 1.5
+Tolerancia: 1e-6
+Max. iteraciones: 100
+
+Resultado esperado: Raíz ≈ 2 (aunque el método puede no converger si g′(x) ≥ 1)
+Este prueba que el método puede funcionar si se elige bien g(x).
+
 ### Punto fijo
+Función: f(x) = x^3 - x - 2
+Derivada: f'(x) = 3x^2 - 1
+
+Valor inicial: x0 = 1.5
+Tolerancia: 1e-6
+Max. iteraciones: 100
+
+Resultado esperado: Raíz ≈ 1.5213797
