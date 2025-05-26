@@ -117,6 +117,7 @@ Los metodos que veremos en esta ocacion son:
         Retornar x2
 
 ### Newton-Raphson
+
     Función f(x):
         Retornar f(x)   // Por ejemplo: x^3 - x - 2
 
@@ -167,3 +168,10 @@ Los metodos que veremos en esta ocacion son:
         Mostrar "No se encontró la raíz en el número máximo de iteraciones"
         Retornar x1
 
+## Casos de prueba
+
+### Biseccion
+### Regla falsa
+### Secante
+### Newton-Raphson
+### Punto fijo
