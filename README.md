@@ -6,6 +6,8 @@ En este repositorio el objetivo es recopilar la mayor parte de informacion acerc
 
 ### Tema 1
 
+  - [Readme Tema 1](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema1/Tema1.md)
+
 ### Tema 2
 
   - [Readme Tema 2](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema2/Tema2.md)
@@ -17,11 +19,19 @@ En este repositorio el objetivo es recopilar la mayor parte de informacion acerc
 
 ### Tema 3
 
+  - [Readme Tema 3](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema3/Tema3.md)
+
 ### Tema 4
+
+  - [Readme Tema 4](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema4/Tema4.md)
 
 ### Tema 5
 
+  - [Readme Tema 5](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema5/Tema5.md)
+
 ### Tema 6
+
+  - [Readme Tema 6](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema6/Tema6.md)
 
 ## Introduccion a Metodos Numericos
 Los métodos numéricos son técnicas matemáticas que se utilizan para resolver problemas matemáticos mediante aproximaciones numéricas en lugar de soluciones exactas. Estos métodos son especialmente útiles cuando las soluciones analíticas no son posibles o son demasiado complejas. Algunos ejemplos de métodos numéricos son el método de Newton-Raphson, el método de la secante, el método de Euler para ecuaciones diferenciales, entre otros. Estos métodos se aplican en diversas áreas como la ingeniería, la física, la economía y la informática para resolver problemas que involucran cálculos numéricos.
