@@ -250,11 +250,11 @@ Resultado esperado: Raíz ≈ 1.5213797
 
 ### Newton Raphson
 
-1. [Ejemplo 1]()
-2. [Ejemplo 2]()
-3. [Ejemplo 3]()
-4. [Ejemplo 4]()
-5. [Ejemplo 5]()
+1. [Ejemplo 1](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema2/Newtom%20Raphson/Ejemplo_1.java)
+2. [Ejemplo 2](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema2/Newtom%20Raphson/Ejemplo_2.java)
+3. [Ejemplo 3](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema2/Newtom%20Raphson/Ejemplo_3.java)
+4. [Ejemplo 4](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema2/Newtom%20Raphson/Ejemplo_4.java)
+5. [Ejemplo 5](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema2/Newtom%20Raphson/Ejemplo_5.java)
 
 ### Punto Fijo
 
