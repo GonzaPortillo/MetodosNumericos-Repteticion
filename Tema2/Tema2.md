@@ -231,3 +231,35 @@ Resultado esperado: Raíz ≈ 1.5213797
 3. [Ejemplo 3](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema2/Biseccion/Ejemplo3.java)
 4. [Ejemplo 4](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema2/Biseccion/Ejemplo4.java)
 5. [Ejemplo 5](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema2/Biseccion/Ejemplo5.java)
+
+### Secante
+
+1. [Ejemplo 1]()
+2. [Ejemplo 2]()
+3. [Ejemplo 3]()
+4. [Ejemplo 4]()
+5. [Ejemplo 5]()
+
+### Regla falsa
+
+1. [Ejemplo 1]()
+2. [Ejemplo 2]()
+3. [Ejemplo 3]()
+4. [Ejemplo 4]()
+5. [Ejemplo 5]()
+
+### Newton Raphson
+
+1. [Ejemplo 1]()
+2. [Ejemplo 2]()
+3. [Ejemplo 3]()
+4. [Ejemplo 4]()
+5. [Ejemplo 5]()
+
+### Punto Fijo
+
+1. [Ejemplo 1]()
+2. [Ejemplo 2]()
+3. [Ejemplo 3]()
+4. [Ejemplo 4]()
+5. [Ejemplo 5]()
