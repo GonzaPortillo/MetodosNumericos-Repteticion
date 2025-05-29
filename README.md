@@ -5,15 +5,13 @@ En este repositorio el objetivo es recopilar la mayor parte de informacion acerc
 ## INDICE
 
 ### Tema 1
-[Hola](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/tree/main/Tema6/Paso%20Multiple)
-  - [Readme Tema 1](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema1/Tema1.md)
-  - [Codigos de Error Absoluto]()
-  - [Codigos de Error Cuadratico Medio]()
-  - [Codigos de Error Relativo]()
-  - [Codigos de Error de Redondeo]()
-  - [Codigos de Error de Truncamiento]()
-  - [Codigos de Error Porcentual]()
 
+  - [Readme Tema 1](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema1/Tema1.md)
+  - [Codigos de Error Absoluto](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/tree/main/Tema1/Error%20Absoluto)
+  - [Codigos de Error Cuadratico Medio](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/tree/main/Tema1/Error%20Cuatratico%20medio)
+  - [Codigos de Error Relativo](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/tree/main/Tema1/Error%20Relativo)
+  - [Codigos de Error de Redondeo](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/tree/main/Tema1/Error%20de%20redondeo)
+  - [Codigos de Error de Truncamiento](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/tree/main/Tema1/Error%20de%20truncamiento)
 
 ### Tema 2
 
