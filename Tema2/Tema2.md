@@ -52,7 +52,7 @@ Los metodos que veremos en esta ocacion son:
 3. Si f'(xn) = 0 se detiene debido a que no se puede continuar
 4. Calcular una nueva aproximacion
 5. Calcular el error
-6. Si el error es menor que la tolerancia
+6. Si el error es menor que la tolerancia se devuelve 
 
 ### Punto fijo
 
