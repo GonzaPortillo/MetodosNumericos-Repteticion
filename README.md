@@ -6,7 +6,7 @@ En este repositorio el objetivo es recopilar la mayor parte de informacion acerc
 
 ### Tema 1
 
-  - [Readme Tema 1](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema1/Tema1.md)
+  - [Readme Tema 1](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema1/Tema_1.md)
   - [Codigos de Error Absoluto](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/tree/main/Tema1/Error%20Absoluto)
   - [Codigos de Error Cuadratico Medio](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/tree/main/Tema1/Error%20Cuatratico%20medio)
   - [Codigos de Error Relativo](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/tree/main/Tema1/Error%20Relativo)
