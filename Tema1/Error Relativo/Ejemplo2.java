@@ -5,6 +5,6 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        System.out.println(calcularErrorRelativo(12.3, 11.9));
+        System.out.printf("Error Relativo: %.4f%n", calcularErrorRelativo(12.3, 11.9));
     }
 }
