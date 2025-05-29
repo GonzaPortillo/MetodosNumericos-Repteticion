@@ -46,8 +46,17 @@ Los metodos que veremos en esta ocacion son:
 3. Fija la tolerancia para el error aceptable y un numero maximo de iteraciones
 
 - En cada iteracion:
- 
 
+1. Calcular f(xn)
+2. Calcular f'(xn)
+3. Si f'(xn) = 0 se detiene debido a que no se puede continuar
+4. Calcular una nueva aproximacion
+5. Calcular el error
+6. Si el error es menor que la tolerancia
+
+### Punto fijo
+
+1. 
 ## Pseudocodigos
 
 ### Biseccion
