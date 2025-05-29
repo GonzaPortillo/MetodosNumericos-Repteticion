@@ -173,57 +173,12 @@ Los metodos que veremos en esta ocacion son:
 ## Casos de prueba
 
 ### Biseccion
-- Función: f(x) = x^3 - x - 2
-- Intervalo: a = 1, b = 2
-- Tolerancia: 1e-6
-- Max. iteraciones: 100
-
-
-Resultado esperado: Raíz ≈ 1.5213797
-
-Este caso es clásico para Bisección, ya que f(1) * f(2) < 0 → hay una raíz entre 1 y 2.
-
-### Regla falsa
-- Función: f(x) = x^2 - 4
-- Intervalo: a = 0, b = 3
-- Tolerancia: 1e-6
-- Max. iteraciones: 100
-
-
-Resultado esperado: Raíz ≈ 2
-
-La función cambia de signo entre 0 y 3, y su raíz exacta es x = 2.
 
 ### Secante
-- Función: f(x) = x^3 - x^2 + 2
-- Valores iniciales: x0 = -20, x1 = -10
-- Tolerancia: 1e-6
-- Max. iteraciones: 100
-
-Resultado esperado: No hay raíz real (la función no cruza el eje x), el método probablemente diverge o se detiene por exceso de iteraciones.
-
-Este caso prueba un comportamiento negativo: qué pasa cuando no hay raíz real.
 
 ### Newton-Raphson
-- Queremos resolver: f(x) = x^2 - x - 2 = 0
-- Reorganizamos: x = g(x) = √(x + 2)
-- Valor inicial: x0 = 1.5
-- Tolerancia: 1e-6
-- Max. iteraciones: 100
-
-Resultado esperado: Raíz ≈ 2 (aunque el método puede no converger si g′(x) ≥ 1)
-
-Este prueba que el método puede funcionar si se elige bien g(x).
 
 ### Punto fijo
-- Función: f(x) = x^3 - x - 2
-- Derivada: f'(x) = 3x^2 - 1
-- Valor inicial: x0 = 1.5
-- Tolerancia: 1e-6
-- Max. iteraciones: 100
-
-Resultado esperado: Raíz ≈ 1.5213797
-
 
 ## Ejemplos en codigo Java
 ### Biseccion
