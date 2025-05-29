@@ -1,3 +1,5 @@
+//Con arreglos int
+
 public class MSEEjemplo1 {
   
     public static void main(String[] args) {
