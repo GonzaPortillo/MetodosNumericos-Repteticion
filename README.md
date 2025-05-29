@@ -7,20 +7,10 @@ En este repositorio el objetivo es recopilar la mayor parte de informacion acerc
 ### Tema 1
 
   - [Readme Tema 1](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema1/Tema_1.md)
-  - [Codigos de Error Absoluto](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/tree/main/Tema1/Error%20Absoluto)
-  - [Codigos de Error Cuadratico Medio](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/tree/main/Tema1/Error%20Cuatratico%20medio)
-  - [Codigos de Error Relativo](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/tree/main/Tema1/Error%20Relativo)
-  - [Codigos de Error de Redondeo](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/tree/main/Tema1/Error%20de%20redondeo)
-  - [Codigos de Error de Truncamiento](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/tree/main/Tema1/Error%20de%20truncamiento)
 
 ### Tema 2
 
   - [Readme Tema 2](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema2/Tema2.md)
-  - [Codigos de Biseccion](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/tree/main/Tema2/Biseccion)
-  - [Codigos Regla Falsa](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/tree/main/Tema2/Regla%20Falsa)
-  - [Codigos Secante](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/tree/main/Tema2/Secante)
-  - [Codigos Punto Fijo](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/tree/main/Tema2/Punto%20fijo)
-  - [Codigos Newton Raphson](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/tree/main/Tema2/Newtom%20Raphson)
 
 ### Tema 3
 
