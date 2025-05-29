@@ -18,7 +18,7 @@ Entre los errores más comunes se encuentran:
 
 ### Error Absoluto
 Este algoritmo calcula qué tanto difiere un valor aproximado de su valor real.
-Pasos:
+#### Pasos:
 
 1. Leer el valor real (VR).
 2. Leer el valor aproximado (VA).
@@ -27,7 +27,7 @@ Pasos:
 
 ### Error Relativo
 Este algoritmo compara el error absoluto con respecto al valor real, útil cuando se trabaja con magnitudes muy diferentes.
-Pasos:
+#### Pasos:
 
 Leer el valor real (VR).
 
