@@ -1,4 +1,4 @@
-[ <- Regresan](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/tree/main)
+[ <- Regresar](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/tree/main)
 
 # Introduccion a Metodos Numericos
 
