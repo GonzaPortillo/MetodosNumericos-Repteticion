@@ -248,3 +248,9 @@ Cada uno de estos métodos tiene ventajas y desventajas, y su uso dependerá del
 3. [Ejemplo 3](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema2/Punto%20fijo/Ejemplo3.java)
 4. [Ejemplo 4](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema2/Punto%20fijo/Ejemplo4.java)
 5. [Ejemplo 5](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema2/Punto%20fijo/Ejemplo5.java)
+6. 
+
+
+[TEXTO DE VINCULO]
+
+[ REGLA FALSA ](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema2/Punto%20fijo/Ejemplo5.java) 
