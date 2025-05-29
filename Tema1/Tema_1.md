@@ -29,22 +29,16 @@ Este algoritmo calcula qué tanto difiere un valor aproximado de su valor real.
 Este algoritmo compara el error absoluto con respecto al valor real, útil cuando se trabaja con magnitudes muy diferentes.
 #### Pasos:
 
-Leer el valor real (VR).
+1. Leer el valor real (VR).
+2. Leer el valor aproximado (VA).
+3. Verificar que el valor real no sea cero (para evitar división por cero).
+4. Calcular el error absoluto: |VR - VA|.
+5. Dividir ese resultado entre |VR| para obtener el error relativo.
+6. El resultado es el error relativo.
 
-Leer el valor aproximado (VA).
-
-Verificar que el valor real no sea cero (para evitar división por cero).
-
-Calcular el error absoluto: |VR - VA|.
-
-Dividir ese resultado entre |VR| para obtener el error relativo.
-
-El resultado es el error relativo.
-
-✅ 3. Algoritmo del Error de Redondeo
+### Error de Redondeo
 Este algoritmo mide cuánto se pierde al redondear un número.
-
-Pasos:
+#### Pasos:
 
 Leer el número original (con todas sus cifras).
 
