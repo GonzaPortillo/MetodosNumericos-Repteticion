@@ -2,15 +2,23 @@
 
 # Métodos de Solución de Ecuaciones
 
-## Introduccion
+# Introducción
 
-Los métodos de solución de ecuaciones son técnicas utilizadas para encontrar los valores de las variables que satisfacen una ecuación dada. Dependiendo del tipo de ecuación, se pueden utilizar diferentes métodos.
+Los **métodos de solución de ecuaciones** son técnicas numéricas utilizadas para encontrar los valores de las variables que satisfacen una ecuación dada, es decir, los **valores que hacen que una función se anule** (raíces de la función). Estos métodos resultan útiles cuando no es posible resolver una ecuación de forma analítica o exacta. Dependiendo del tipo de función y del comportamiento de la raíz, se pueden aplicar distintos enfoques para obtener una solución aproximada con un margen de error aceptable.
 
-Los metodos que veremos en esta ocacion son:
+En este proyecto se abordan los siguientes métodos numéricos para encontrar raíces de funciones:
 
-1. Biseccion: Es un método numérico utilizado para encontrar las raíces de una función continua. Consiste en dividir repetidamente un intervalo en dos partes y seleccionar el subintervalo en el que existe un cambio de signo de la función, lo que indica la presencia de una raíz. Este proceso se repite hasta que se alcanza un intervalo suficientemente pequeño, proporcionando una aproximación de la raíz.
-2. Regla falsa: También conocido como método de interpolación lineal o método de la secante, es un método numérico para encontrar raíces de funciones continuas. A diferencia del método de bisección, que divide el intervalo por la mitad, la regla falsa utiliza una interpolación lineal entre los puntos finales del intervalo para estimar la raíz. Este método converge más rápidamente que el método de bisección en ciertos casos.
-3. Secante: Es un método numérico para encontrar raíces de una función continua. Es similar al método de la regla falsa, pero en lugar de mantener un intervalo que contiene la raíz, utiliza dos aproximaciones sucesivas de la raíz para iterativamente acercarse a la solución. Este método generalmente converge más rápido que el método de bisección y la regla falsa.
+- **Bisección**: Método que divide un intervalo donde la función cambia de signo, asegurando la presencia de una raíz, y reduce el intervalo hasta alcanzar la precisión deseada.
+
+- **Regla Falsa (Falsa Posición)**: Utiliza una interpolación lineal entre los extremos del intervalo para estimar la raíz, permitiendo una convergencia más rápida que la bisección en ciertos casos.
+
+- **Secante**: Se basa en dos aproximaciones sucesivas y construye una línea secante para encontrar nuevas aproximaciones. Generalmente converge más rápido, pero es menos estable.
+
+- **Punto Fijo**: Reescribe la ecuación en la forma \( x = g(x) \) y aplica iteraciones sucesivas para encontrar la raíz, siempre que se cumplan ciertas condiciones de convergencia.
+
+- **Newton-Raphson**: Método muy eficiente que requiere la derivada de la función. A partir de una aproximación inicial, utiliza la pendiente de la tangente para aproximarse rápidamente a la raíz.
+
+Cada uno de estos métodos tiene ventajas y desventajas, y su uso dependerá del tipo de función y la información disponible.
 
 ## Algoritmos
 
