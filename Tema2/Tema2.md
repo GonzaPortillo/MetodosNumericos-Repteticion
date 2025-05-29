@@ -39,6 +39,14 @@ Los metodos que veremos en esta ocacion son:
 5. Calcular Xi+1 usando la formula.
 6. Retornar Xi+1 como la raíz aproximada si se ha alcanzado la tolerancia, o el valor más cercano después de maxIter iteraciones.
 
+### Newton Raphson
+
+1. Definir la funcion f(x) y su derivada
+2. Elegir valor inicial de x0
+3. Fija la tolerancia para el error aceptable y un numero maximo de iteraciones
+   3.1. Calcular f(xn)
+   3.2. 
+
 ## Pseudocodigos
 
 ### Biseccion
