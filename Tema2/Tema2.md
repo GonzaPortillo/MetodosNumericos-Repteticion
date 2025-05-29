@@ -44,8 +44,8 @@ Los metodos que veremos en esta ocacion son:
 1. Definir la funcion f(x) y su derivada
 2. Elegir valor inicial de x0
 3. Fija la tolerancia para el error aceptable y un numero maximo de iteraciones
-3.1. Calcular f(xn)
-3.2.
+
+- En cada iteracion:
  
 
 ## Pseudocodigos
