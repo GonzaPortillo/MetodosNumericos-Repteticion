@@ -42,44 +42,29 @@ Este algoritmo compara el error absoluto con respecto al valor real, útil cuand
 Este algoritmo mide cuánto se pierde al redondear un número.
 #### Pasos:
 
-Leer el número original (con todas sus cifras).
+1. Leer el número original (con todas sus cifras).
+2. Leer el número redondeado.
+3. Calcular la diferencia absoluta entre ellos: |original - redondeado|.
+4. El resultado es el error de redondeo.
 
-Leer el número redondeado.
-
-Calcular la diferencia absoluta entre ellos: |original - redondeado|.
-
-El resultado es el error de redondeo.
-
-✅ 4. Algoritmo del Error de Truncamiento
+### Error de Truncamiento
 Se usa cuando se interrumpe un cálculo infinito (como una serie) en un punto determinado.
+#### Pasos:
 
-Pasos:
+1. Leer el valor exacto o más preciso de una función.
+2. Leer el valor truncado (calculado con menos términos o pasos).
+3. Calcular la diferencia absoluta: |exacto - truncado|.
+4. El resultado es el error de truncamiento.
 
-Leer el valor exacto o más preciso de una función.
-
-Leer el valor truncado (calculado con menos términos o pasos).
-
-Calcular la diferencia absoluta: |exacto - truncado|.
-
-El resultado es el error de truncamiento.
-
-✅ 5. Algoritmo del Error Cuadrático Medio (MSE)
+### Error Cuadrático Medio (MSE)
 Este algoritmo calcula el promedio de los errores al cuadrado entre varios valores reales y aproximados. Es muy usado en estadística y aprendizaje automático.
+#### Pasos:
 
-Pasos:
-
-Leer dos listas del mismo tamaño: una con los valores reales y otra con los valores aproximados.
-
-Inicializar una variable para acumular la suma de errores al cuadrado.
-
-Para cada par de valores reales y aproximados:
-
-Restar: error = real - aproximado.
-
-Elevar ese error al cuadrado.
-
-Sumarlo a la variable acumuladora.
-
-Dividir la suma total entre el número de elementos.
-
-El resultado es el MSE (error cuadrático medio).
+1. Leer dos listas del mismo tamaño: una con los valores reales y otra con los valores aproximados.
+2. Inicializar una variable para acumular la suma de errores al cuadrado.
+3. Para cada par de valores reales y aproximados:
+  - Restar: error = real - aproximado.
+  - Elevar ese error al cuadrado.
+  - Sumarlo a la variable acumuladora.
+4. Dividir la suma total entre el número de elementos.
+5. El resultado es el MSE (error cuadrático medio).
