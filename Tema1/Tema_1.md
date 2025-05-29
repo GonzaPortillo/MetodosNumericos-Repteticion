@@ -63,8 +63,9 @@ Este algoritmo calcula el promedio de los errores al cuadrado entre varios valor
 1. Leer dos listas del mismo tamaño: una con los valores reales y otra con los valores aproximados.
 2. Inicializar una variable para acumular la suma de errores al cuadrado.
 3. Para cada par de valores reales y aproximados:
+
      - Restar: error = real - aproximado.
      - Elevar ese error al cuadrado.
      - Sumarlo a la variable acumuladora.
-4. Dividir la suma total entre el número de elementos.
-5. El resultado es el MSE (error cuadrático medio).
+5. Dividir la suma total entre el número de elementos.
+6. El resultado es el MSE (error cuadrático medio).
