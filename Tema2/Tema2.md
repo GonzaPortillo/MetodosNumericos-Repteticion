@@ -174,6 +174,8 @@ Los metodos que veremos en esta ocacion son:
 
 ### Biseccion
 
+### Regla falsa
+
 ### Secante
 
 ### Newton-Raphson
