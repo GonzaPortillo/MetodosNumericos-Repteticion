@@ -251,6 +251,41 @@ Cada uno de estos métodos tiene ventajas y desventajas, y su uso dependerá del
 6. 
 
 
-[TEXTO DE VINCULO]
+## Métodos Numéricos para Encontrar Raíces
 
-[ REGLA FALSA ](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema2/Punto%20fijo/Ejemplo5.java) 
+---
+
+## Método de Bisección
+
+### Algoritmo
+
+1. Definir la función \( f(x) \) y los extremos del intervalo \([a, b]\) tal que \( f(a) \cdot f(b) < 0 \).
+2. Calcular el punto medio \( c = \frac{a + b}{2} \).
+3. Evaluar \( f(c) \). Si \( f(c) = 0 \) o el intervalo es suficientemente pequeño, \( c \) es la raíz.
+4. Si \( f(a) \cdot f(c) < 0 \), la raíz está en \([a, c]\); de lo contrario, en \([c, b]\).
+5. Repetir hasta cumplir el criterio de convergencia.
+
+### Pseudocódigo
+
+```plaintext
+Función f(x):
+  Retornar x^3 - x - 2
+
+Función Biseccion(a, b, tolerancia, maxIteraciones):
+  Si f(a) * f(b) ≥ 0:
+    Mostrar "El método de bisección no se puede aplicar"
+    Retornar NaN
+
+  Repetir hasta maxIteraciones:
+    c ← (a + b) / 2
+    Si f(c) == 0 ó (b - a)/2 < tolerancia:
+      Retornar c
+
+    Si f(c) * f(a) < 0:
+      b ← c
+    Sino:
+      a ← c
+
+  Retornar c
+
+ 
