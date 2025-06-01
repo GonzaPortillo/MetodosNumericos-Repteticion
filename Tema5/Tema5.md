@@ -97,9 +97,50 @@ Precio estimado para 0.75 kg de manzanas: $2.15
 ## Interpolacion Polinomica
 
 ### Algoritmo
+
+
+1. Definir las coordenadas conocidas \( x = [x_0, x_1, ..., x_{n-1}] \) y \( y = [y_0, y_1, ..., y_{n-1}] \).
+2. Definir el punto de evaluación \( x_{eval} \).
+3. Inicializar el resultado `result` en 0.
+4. Para cada índice \( i \) de 0 a \( n-1 \):
+   - Inicializar `term` con \( y_i \).
+   - Para cada índice \( j \) de 0 a \( n-1 \) donde \( j \neq i \):
+     - Multiplicar `term` por \(\frac{x_{eval} - x_j}{x_i - x_j}\).
+   - Sumar `term` a `result`.
+5. Retornar `result` como el valor interpolado en \( x_{eval} \).
+
 ### Pseudocódigo
+
+```
+Para i ← 0 hasta n-1 hacer:
+    term ← y[i]
+    Para j ← 0 hasta n-1 hacer:
+        Si j ≠ i entonces:
+            term ← term * (xEval - x[j]) / (x[i] - x[j])
+    result ← result + term
+
+retornar result
+```
+
 ### Codigo en Java
+
+```java
+```
+
 ### Caso de prueba
+
+Datos de entrada
+```
+x ← [0, 1, 2]
+y ← [1, 3, 2]
+xEval ← 1.5
+```
+
+Salida esperada
+```
+Problema 1: P(1.5) = 2.250
+```
+
 ### Codigos
 
 1. [Ejemplo 1]()
