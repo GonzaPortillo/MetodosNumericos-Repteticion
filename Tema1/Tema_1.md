@@ -12,41 +12,10 @@ Entre los errores más comunes se encuentran:
 
 - [**Error absoluto**](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema1/Tema_1.md#error-absoluto): Es la diferencia directa entre el valor real (verdadero) y el valor aproximado.
 - [**Error cuadrático medio (MSE)**](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema1/Tema_1.md#error-cuadratico-medio): Se utiliza principalmente para evaluar el rendimiento global de un conjunto de estimaciones en relación con los valores reales. Es común en estadística, machine learning y simulaciones numéricas.
-- [***Error relativo***](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema1/Tema_1.md#error-relativo-1): Representa el error absoluto en proporción al valor real. Es útil para comparar errores en magnitudes diferentes.
-- ***Error de redondeo***: Ocurre al limitar el número de cifras decimales que se pueden representar o usar en un cálculo. Este tipo de error es inherente al uso de números finitos en computadoras.
-- ***Error de truncamiento***: Aparece cuando se interrumpe un proceso infinito, como una serie numérica, después de un número finito de términos. Es común al usar aproximaciones como series de Taylor o métodos iterativos.
+- [**Error relativo**](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema1/Tema_1.md#error-relativo-1): Representa el error absoluto en proporción al valor real. Es útil para comparar errores en magnitudes diferentes.
+- **Error de redondeo**: Ocurre al limitar el número de cifras decimales que se pueden representar o usar en un cálculo. Este tipo de error es inherente al uso de números finitos en computadoras.
+- **Error de truncamiento**: Aparece cuando se interrumpe un proceso infinito, como una serie numérica, después de un número finito de términos. Es común al usar aproximaciones como series de Taylor o métodos iterativos.
 
-
-## Algoritmos
-
-### Error Relativo
-Este algoritmo compara el error absoluto con respecto al valor real, útil cuando se trabaja con magnitudes muy diferentes.
-#### Pasos:
-
-1. Leer el valor real (VR).
-2. Leer el valor aproximado (VA).
-3. Verificar que el valor real no sea cero (para evitar división por cero).
-4. Calcular el error absoluto: |VR - VA|.
-5. Dividir ese resultado entre |VR| para obtener el error relativo.
-6. El resultado es el error relativo.
-
-### Error de Redondeo
-Este algoritmo mide cuánto se pierde al redondear un número.
-#### Pasos:
-
-1. Leer el número original (con todas sus cifras).
-2. Leer el número redondeado.
-3. Calcular la diferencia absoluta entre ellos: |original - redondeado|.
-4. El resultado es el error de redondeo.
-
-### Error de Truncamiento
-Se usa cuando se interrumpe un cálculo infinito (como una serie) en un punto determinado.
-#### Pasos:
-
-1. Leer el valor exacto o más preciso de una función.
-2. Leer el valor truncado (calculado con menos términos o pasos).
-3. Calcular la diferencia absoluta: |exacto - truncado|.
-4. El resultado es el error de truncamiento.
 
 ## Error Absoluto
 
@@ -118,6 +87,13 @@ Salida esperada
 [2.0, 2.0, 3.0]
 ```
 
+### Codigos
+1. [Ejemplo 1](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema1/Error%20Absoluto/Ejemplo1.java)
+2. [Ejemplo 2](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema1/Error%20Absoluto/Ejemplo2.java)
+3. [Ejemplo 3](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema1/Error%20Absoluto/Ejemplo3.java)
+4. [Ejemplo 4](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema1/Error%20Absoluto/Ejemplo4.java)
+5. [Ejemplo 5](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema1/Error%20Absoluto/Ejemplo5.java)
+
 ## Error Cuadratico Medio
 
 ### Algoritmo
@@ -186,6 +162,11 @@ MSE: 0.4
 ```
 
 ### Codigos
+1. [Ejemplo 1](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema1/Error%20Cuatratico%20medio/Ejemplo1.java)
+2. [Ejemplo 2](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema1/Error%20Cuatratico%20medio/Ejemplo2.java)
+3. [Ejemplo 3](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema1/Error%20Cuatratico%20medio/Ejemplo3.java)
+4. [Ejemplo 4](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema1/Error%20Cuatratico%20medio/Ejemplo4.java)
+5. [Ejemplo 5](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema1/Error%20Cuatratico%20medio/Ejemplo5.java)
 
 ## Error Relativo
 
@@ -256,6 +237,11 @@ Errores Relativos: [0.03, 0.024, 0.054]
 ```
 
 ### Codigos
+1. [Ejemplo 1](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema1/Error%20Relativo/Ejemplo1.java)
+2. [Ejemplo 2](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema1/Error%20Relativo/Ejemplo2.java)
+3. [Ejemplo 3](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema1/Error%20Relativo/Ejemplo3.java)
+4. [Ejemplo 4](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema1/Error%20Relativo/Ejemplo4.java)
+5. [Ejemplo 5](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema1/Error%20Relativo/Ejemplo5.java)
 
 ## Error de Redondeo
 
@@ -322,26 +308,83 @@ Errores de Redondeo: [0.0015, 0.0017, 0.0019]
 ```
 
 ### Codigos
+1. [Ejemplo 1](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema1/Error%20de%20redondeo/Ejemplo1.java)
+2. [Ejemplo 2](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema1/Error%20de%20redondeo/Ejemplo2.java)
+3. [Ejemplo 3](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema1/Error%20de%20redondeo/Ejemplo3.java)
+4. [Ejemplo 4](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema1/Error%20de%20redondeo/Ejemplo4.java)
+5. [Ejemplo 5](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema1/Error%20de%20redondeo/Ejemplo5.java)
 
 ## Error de Truncamiento
 
 ### Algoritmo
+
+1. Definir un arreglo o lista de valores reales con decimales.
+2. Definir el número de decimales a los que se truncará cada valor.
+3. Para cada valor en la lista:
+    1. Truncar el valor al número de decimales especificado.
+    2. Calcular el error de truncamiento: valor original - valor truncado.
+4. Guardar cada error en una lista.
+5. Retornar o mostrar la lista de errores de truncamiento.
+
 ### Pseudocódigo
 
 ```
+Función CalcularErrorTruncamiento(valores, decimales):
+    errores ← lista vacía
+    factor ← 10 ^ decimales
+
+    Para cada valor en valores:
+        truncado ← (entero(valor * factor)) / factor
+        error ← valor - truncado
+        agregar error a errores
+
+    Retornar errores
+
 ```
 
 ### Codigo en Java
 
 ```java
+import java.util.ArrayList;
+
+public class TruncamientoEjemplo4 {
+
+    public static ArrayList<Double> calcularErrorTruncamiento(double[] valores, int decimales) {
+        ArrayList<Double> errores = new ArrayList<>();
+        double factor = Math.pow(10, decimales);
+
+        for (double valor : valores) {
+            double truncado = ((int)(valor * factor)) / factor;
+            double error = Math.abs(valor - truncado);
+            errores.add(error);
+        }
+        return errores;
+    }
+
+    public static void main(String[] args) {
+        double[] valores = {1.005, 2.675, 3.456};
+        int decimales = 2;
+        System.out.println("Ejemplo 4 - Errores de Truncamiento: " + calcularErrorTruncamiento(valores, decimales));
+    }
+}
 ```
 
 ### Caso de prueba
 
+Valor de entrada
 ```
+valores = [3.14159, 2.71828, 1.61803]
+decimales = 2
 ```
 
+Salida esperada
 ```
+Errores de truncamiento ≈ [0.00159, 0.00828, 0.01803]
 ```
 
 ### Codigos
+1. [Ejemplo 1](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema1/Error%20de%20truncamiento/Ejemplo1.java)
+2. [Ejemplo 2](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema1/Error%20de%20truncamiento/Ejemplo2.java)
+3. [Ejemplo 3](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema1/Error%20de%20truncamiento/Ejemplo3.java)
+4. [Ejemplo 4](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema1/Error%20de%20truncamiento/Ejemplo4.java)
+5. [Ejemplo 5](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema1/Error%20de%20truncamiento/Ejemplo5.java)
