@@ -317,7 +317,7 @@ f(x) = x^2 - x - 2
 Salida esperada 
 
 ```
-Raíz aproximada: 2.000000
+Raíz aproximada: 2.00
 ```
 
 ### Codigos
@@ -331,9 +331,98 @@ Raíz aproximada: 2.000000
 ## Regla Falsa
 
 ### Algoritmo
+
+1. Calcular \( f(a) \) y \( f(b) \).
+2. Verificar si \( f(a) \cdot f(b) > 0 \):  
+   - Si es así, **detener**: no se garantiza una raíz en el intervalo.
+3. Iterar hasta alcanzar la tolerancia o el número máximo de iteraciones:
+   - Calcular el punto de intersección de la secante:
+     \[
+     c = b - f(b) \cdot \frac{b - a}{f(b) - f(a)}
+     \]
+   - Calcular \( f(c) \).
+   - Si \( |f(c)| < \text{tolerancia} \), retornar \( c \) como la raíz.
+   - Si \( f(a) \cdot f(c) < 0 \):
+     - Reemplazar \( b = c \), \( f(b) = f(c) \)
+   - Sino:
+     - Reemplazar \( a = c \), \( f(a) = f(c) \)
+4. Si se alcanza el número máximo de iteraciones, retornar el último valor de \( c \).
+
 ### Pseudocódigo
+
+```
+Función f(x):
+    Retornar x^2 - 4
+
+Función ReglaFalsa(a, b, tolerancia, maxIteraciones):
+    fa ← f(a)
+    fb ← f(b)
+
+    Si fa * fb > 0:
+        Mostrar "La función no cambia de signo en el intervalo"
+        Retornar NaN
+
+    Repetir hasta maxIteraciones:
+        c ← b - fb * (b - a) / (fb - fa)
+        fc ← f(c)
+
+        Si |fc| < tolerancia:
+            Mostrar "Raíz encontrada: c"
+            Retornar c
+
+        Si fa * fc < 0:
+            b ← c
+            fb ← fc
+        Sino:
+            a ← c
+            fa ← fc
+
+    Mostrar "No se encontró la raíz después de maxIteraciones iteraciones"
+    Retornar c
+```
+
 ### Codigo en Java
+
+```java
+public class ReglaFalsa1 {
+    public static double f(double x) {
+        return x * x * x - x - 2;
+    }
+
+    public static void main(String[] args) {
+        double a = 1, b = 2, tol = 1e-6;
+        int maxIter = 100;
+        double fa = f(a), fb = f(b), c = a;
+
+        for (int i = 0; i < maxIter; i++) {
+            c = b - fb * (b - a) / (fb - fa);
+            double fc = f(c);
+            if (Math.abs(fc) < tol) break;
+            if (fa * fc < 0) {
+                b = c; fb = fc;
+            } else {
+                a = c; fa = fc;
+            }
+        }
+
+        System.out.printf("Raíz aproximada: %.2f\n", c);
+    }
+}
+```
+
 ### Caso de prueba
+
+
+**Función objetivo:**
+
+```plaintext
+f(x) = x^3 - x - 2
+```
+
+```
+Raíz aproximada: 1.52
+```
+
 ### Codigos
 
 1. [Ejemplo 1](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema2/Regla%20Falsa/Ejemplo_1.java)
