@@ -60,7 +60,7 @@ Función Biseccion(a, b, tolerancia, maxIteraciones):
 
 **Función objetivo:**
 
-```java
+```plaintext
 f(x) = x^3 - x - 2
 ```
 
