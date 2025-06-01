@@ -56,6 +56,13 @@ Función Biseccion(a, b, tolerancia, maxIteraciones):
 
 ### Caso de prueba
 
+### Bisección
+
+Ejemplo de salida del codigo
+```plaintext
+La raíz encontrada es: 1.521380
+```
+
 ### Codigos
 
 1. [Ejemplo 1](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema2/Biseccion/Ejemplo1.java)
