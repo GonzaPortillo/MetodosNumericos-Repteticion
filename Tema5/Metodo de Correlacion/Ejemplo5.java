@@ -8,7 +8,7 @@ public class Main {
             sumX += x[i];
             sumY += y[i];
             sumXY += x[i] * y[i];
-            sumX2 += x[i] * x[i]; // CORRECTO
+            sumX2 += x[i] * x[i]; 
         }
         double b = (n * sumXY - sumX * sumY) / (n * sumX2 - sumX * sumX);
         double a = (sumY - b * sumX) / n;
