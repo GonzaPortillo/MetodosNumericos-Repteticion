@@ -32,10 +32,60 @@ Son técnicas utilizadas en el análisis de datos y en la matemática aplicada p
 ### Pseudocódigo
 
 ```
+Inicio
+    Leer x0, y0, x1, y1, x
+    Calcular:
+        y ← y0 + ((y1 - y0) / (x1 - x0)) * (x - x0)
+    Mostrar y
+Fin
 ```
 
 ### Codigo en Java
+
+```Java
+public class InterpolacionLineal {
+
+    // Método para interpolar linealmente
+    public static double interpolarLineal(double x0, double y0, double x1, double y1, double x) {
+        // Fórmula: y = y0 + ((y1 - y0) / (x1 - x0)) * (x - x0)
+        return y0 + ((y1 - y0) / (x1 - x0)) * (x - x0);
+    }
+
+    public static void main(String[] args) {
+        // Datos conocidos (peso en kg, precio en $)
+        double peso1 = 0.5;
+        double precio1 = 1.50;
+        double peso2 = 1.0;
+        double precio2 = 2.80;
+
+        // Peso para el que queremos estimar el precio
+        double pesoDeseado = 0.75;
+
+        // Aplicamos interpolación lineal
+        double precioEstimado = interpolarLineal(peso1, precio1, peso2, precio2, pesoDeseado);
+
+        // Mostramos el resultado
+        System.out.println("Precio estimado para " + pesoDeseado + " kg de manzanas: $" + String.format("%.2f", precioEstimado));
+    }
+}
+```
+
 ### Caso de prueba
+
+Datos de entrada
+```
+x0 = 0.5
+y0 = 1.50
+x1 = 1.0
+y1 = 2.80
+x = 0.75
+```
+
+Salida esperada
+```
+Precio estimado para 0.75 kg de manzanas: $2.15
+```
+
 ### Codigos
 
 1. [Ejemplo 1]()
