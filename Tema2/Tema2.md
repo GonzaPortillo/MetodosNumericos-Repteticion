@@ -182,7 +182,7 @@ Retornar x1
 
 ### Codigo en Java
 
-```plaintext
+```java
 public class Newton2 {
     public static double f(double x) {
         return x * x - 4;
@@ -233,9 +233,93 @@ Raíz aproximada: 2.00
 ## Punto Fijo
 
 ### Algoritmo
+
+1. Elegir una función \( g(x) \) tal que \( x = g(x) \) tenga la misma raíz que \( f(x) = 0 \).
+2. Seleccionar un valor inicial \( x_0 \).
+3. Evaluar \( x_1 = g(x_0) \).
+4. Comprobar si \( |x_1 - x_0| < \text{tolerancia} \).  
+   - Si es así, detener y retornar \( x_1 \) como la raíz.
+5. Si no se cumple la condición de tolerancia:
+   - Asignar \( x_0 = x_1 \) y repetir el proceso.
+6. Si se alcanza el número máximo de iteraciones sin cumplir la condición, mostrar mensaje de error.
+7. Retornar la última aproximación \( x_1 \).
+
 ### Pseudocódigo
+
+```plaintext
+Función g(x):
+    Retornar alguna función equivalente a x = g(x)
+    (Ejemplo: g(x) = sqrt(x + 2) si f(x) = x^2 - x - 2)
+
+Función PuntoFijo(x0, tolerancia, maxIteraciones):
+    iter ← 0
+
+    Repetir mientras iter < maxIteraciones:
+        x1 ← g(x0)
+
+        Si |x1 - x0| < tolerancia:
+            Retornar x1
+
+        x0 ← x1
+        iter ← iter + 1
+
+    Mostrar "No se encontró la raíz en el número máximo de iteraciones"
+    Retornar x1
+
+```
+
 ### Codigo en Java
+
+```java
+public class PuntoFijo {
+
+    public static double g(double x) {
+        // Se define en cada ejemplo
+        return 0;
+    }
+
+    public static double puntoFijo(double x0, double tolerancia, int maxIteraciones) {
+        int iter = 0;
+        double x1;
+
+        do {
+            x1 = g(x0);
+
+            if (Math.abs(x1 - x0) < tolerancia) {
+                return x1;
+            }
+
+            x0 = x1;
+            iter++;
+        } while (iter < maxIteraciones);
+
+        System.out.println("No se encontró la raíz en el número máximo de iteraciones.");
+        return x1;
+    }
+
+    public static void main(String[] args) {
+        double x0 = 0.5; // Valor inicial
+        double tolerancia = 1e-6;
+        int maxIteraciones = 100;
+
+        double raiz = puntoFijo(x0, tolerancia, maxIteraciones);
+        System.out.printf("Raíz aproximada: %.2f\n", raiz);
+    }
+}
+```
+
 ### Caso de prueba
+
+```plaintext
+f(x) = x^2 - x - 2
+```
+
+Salida esperada 
+
+```
+Raíz aproximada: 2.000000
+```
+
 ### Codigos
 
 1. [Ejemplo 1](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema2/Punto%20fijo/Ejemplo1.java)
