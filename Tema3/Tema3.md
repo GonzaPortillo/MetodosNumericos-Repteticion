@@ -51,30 +51,387 @@ Los metodos que veremos en esta ocacion son:
 5. **Retornar** el vector solución con los valores de las incógnitas.
 
 ### Pseudocódigo
+
+```
+Función resolverSistema(matriz):
+    n ← número de filas de matriz
+
+    Para i desde 0 hasta n-2:
+        Para k desde i+1 hasta n-1:
+            factor ← matriz[k][i] / matriz[i][i]
+            Para j desde i hasta n:
+                matriz[k][j] ← matriz[k][j] - factor * matriz[i][j]
+
+    Crear arreglo solucion de tamaño n
+
+    Para i desde n-1 hasta 0 (decreciendo):
+        solucion[i] ← matriz[i][n]
+        Para j desde i+1 hasta n-1:
+            solucion[i] ← solucion[i] - matriz[i][j] * solucion[j]
+        solucion[i] ← solucion[i] / matriz[i][i]
+
+    Retornar solucion
+```
+
 ### Codigo en Java
+
+```java
+public class EliminacionGaussiana {
+
+    public static void main(String[] args) {
+        double[][] matriz = {
+            {2, 1, -1, 8},
+            {-3, -1, 2, -11},
+            {-2, 1, 2, -3}
+        };
+    
+        double[] solucion = resolverSistema(matriz);
+    
+        for (int i = 0; i < solucion.length; i++) {
+            System.out.println("x" + (i+1) + " = " + solucion[i]);
+        }
+    }
+
+    public static double[] resolverSistema(double[][] matriz) {
+        int n = matriz.length;
+    
+        for (int i = 0; i < n - 1; i++) {
+            for (int k = i + 1; k < n; k++) {
+                double factor = matriz[k][i] / matriz[i][i];
+                for (int j = i; j < n + 1; j++) {
+                    matriz[k][j] -= factor * matriz[i][j];
+                }
+            }
+        }
+    
+        double[] solucion = new double[n];
+        for (int i = n - 1; i >= 0; i--) {
+            solucion[i] = matriz[i][n];
+            for (int j = i + 1; j < n; j++) {
+                solucion[i] -= matriz[i][j] * solucion[j];
+            }
+            solucion[i] /= matriz[i][i];
+        }
+    
+        return solucion;
+    }
+}
+```
+
 ### Caso de prueba
+
+Valor de entrada
+```
+{
+  {2, 1, -1, 8},
+  {-3, -1, 2, -11},
+  {-2, 1, 2, -3}
+}
+```
+Salida esperada
+```
+x1 = 2.0
+x2 = 3.0
+x3 = -1.0
+```
+
 ### Codigos
 
 ## Gauss Jordan
 
 ### Algoritmo
+
+# Algoritmo Método de Gauss-Jordan
+
+1. **Inicializar** la matriz aumentada del sistema de ecuaciones.
+2. **Para** cada fila \( i \) desde la primera hasta la última:
+    1. Encontrar la fila con el valor absoluto máximo en la columna \( i \) desde la fila \( i \) hacia abajo, para evitar divisiones por cero o problemas numéricos. Denotar esta fila como `maxFila`.
+    2. Intercambiar la fila \( i \) con la fila `maxFila`.
+    3. Dividir toda la fila \( i \) por el pivote \( a_{i,i} \) para que el pivote sea 1.
+    4. **Para** cada fila \( k \) diferente de \( i \) (es decir, todas las demás filas):
+        1. Calcular el factor \( \text{factor} = a_{k,i} \).
+        2. Restar a la fila \( k \) el producto del factor por la fila \( i \):  
+           \[
+           a_{k,j} = a_{k,j} - \text{factor} \times a_{i,j} \quad \forall j
+           \]
+           Esto hace que todos los elementos de la columna \( i \), excepto el pivote, queden en cero.
+
+3. La matriz queda en forma escalonada reducida, con los valores de las incógnitas en la última columna.
+4. **Leer** las soluciones \( x_i = a_{i,n} \), donde \( n \) es el índice de la columna de términos independientes.
+5. **Retornar** el vector solución con los valores de las incógnitas.
+
+
 ### Pseudocódigo
+
+```
+Función GaussJordan(matriz):
+    filas ← número de filas en matriz
+    columnas ← número de columnas en matriz
+
+    Para i desde 0 hasta filas - 1:
+        maxFila ← i
+        Para k desde i + 1 hasta filas - 1:
+            Si |matriz[k][i]| > |matriz[maxFila][i]|:
+                maxFila ← k
+
+        Intercambiar matriz[i] con matriz[maxFila]
+
+        pivote ← matriz[i][i]
+        Para j desde i hasta columnas - 1:
+            matriz[i][j] ← matriz[i][j] / pivote
+
+        Para k desde 0 hasta filas - 1:
+            Si k ≠ i:
+                factor ← matriz[k][i]
+                Para j desde i hasta columnas - 1:
+                    matriz[k][j] ← matriz[k][j] - factor * matriz[i][j]
+
+    Retornar matriz
+
+```
+
 ### Codigo en Java
+
+```java
+public class Problema_1 {
+
+    public static void main(String[] args) {
+        double[][] matriz = {
+            {2, 1, -1, 8},
+            {-3, -1, 2, -11},
+            {-2, 1, 2, -3}
+        };
+    
+        double[] solucion = resolverSistema(matriz);
+    
+        for (int i = 0; i < solucion.length; i++) {
+            System.out.println("x" + (i+1) + " = " + solucion[i]);
+        }
+    }
+
+    public static double[] resolverSistema(double[][] matriz) {
+        int n = matriz.length;
+    
+        for (int i = 0; i < n - 1; i++) {
+            for (int k = i + 1; k < n; k++) {
+                double factor = matriz[k][i] / matriz[i][i];
+                for (int j = i; j < n + 1; j++) {
+                    matriz[k][j] -= factor * matriz[i][j];
+                }
+            }
+        }
+    
+        double[] solucion = new double[n];
+        for (int i = n - 1; i >= 0; i--) {
+            solucion[i] = matriz[i][n];
+            for (int j = i + 1; j < n; j++) {
+                solucion[i] -= matriz[i][j] * solucion[j];
+            }
+            solucion[i] /= matriz[i][i];
+        }
+    
+        return solucion;
+    }
+}
+```
+
 ### Caso de prueba
+
+Valores de entrada
+```
+[
+    [2,  1, -1,  8],
+    [-3, -1, 2, -11],
+    [-2, 1,  2, -3]
+]
+
+```
+
+```
+x1 = 2.0
+x2 = 3.0
+x3 = -1.0
+```
+
 ### Codigos
 
 ## Gauss Seidel
 
 ### Algoritmo
+
+1. **Inicializar:**
+   - Sea \( n \) el número de ecuaciones (tamaño de la matriz \( A \)).
+   - Inicializar el vector solución \( x = [0, 0, ..., 0] \).
+   - Establecer el número de iteraciones a 0.
+   - Establecer un valor inicial para el error mayor que la tolerancia deseada.
+
+2. **Repetir mientras el error sea mayor que la tolerancia y el número de iteraciones sea menor que el máximo permitido:**
+   1. Para cada variable \( i = 0, 1, ..., n-1 \):
+      - Calcular la suma:  
+      \[
+      \text{suma} = \sum_{\substack{j=0 \\ j \neq i}}^{n-1} A[i][j] \cdot x[j]
+      \]
+      - Actualizar la solución para la variable \( i \):  
+      \[
+      x_{\text{nuevo}}[i] = \frac{b[i] - \text{suma}}{A[i][i]}
+      \]
+
+3. **Calcular el error máximo:**  
+\[
+\text{error} = \max_{0 \leq i < n} |x_{\text{nuevo}}[i] - x[i]|
+\]
+
+4. **Actualizar el vector solución:**  
+\[
+x = x_{\text{nuevo}}
+\]
+
+5. **Incrementar el contador de iteraciones.**
+
+6. **Si el número máximo de iteraciones se alcanza y el error es mayor que la tolerancia, mostrar mensaje de no convergencia.**
+
+7. **Retornar el vector solución \( x \).**
+
 ### Pseudocódigo
+
+```
+Función GaussSeidel(A, b, tol, maxIter):
+    n ← número de filas de A
+    x ← vector de tamaño n inicializado en 0
+    iter ← 0
+    error ← tol + 1
+
+    Mientras error > tol y iter < maxIter:
+        Para i desde 0 hasta n-1:
+            suma ← 0
+            Para j desde 0 hasta n-1:
+                Si j ≠ i:
+                    suma ← suma + A[i][j] * x[j]
+
+            x_new[i] ← (b[i] - suma) / A[i][i]
+
+        error ← 0
+        Para i desde 0 hasta n-1:
+            error ← max(error, |x_new[i] - x[i]|)
+
+        Para i desde 0 hasta n-1:
+            x[i] ← x_new[i]
+
+        iter ← iter + 1
+
+    Si iter = maxIter:
+        Mostrar "El método no convergió después de maxIter iteraciones."
+
+    Retornar x
+
+```
+
 ### Codigo en Java
+
+```java
+public class Problema_1 {
+
+    public static double[] gaussSeidel(double[][] A, double[] b, double tol, int maxIter) {
+        int n = A.length;
+        double[] x = new double[n]; // Vector de solución
+        double[] x_new = new double[n]; // Vector de solución actualizado
+    
+        for (int i = 0; i < n; i++) {
+            x[i] = 0;
+        }
+    
+        int iter = 0;
+        double error = tol + 1; // Error inicial
+        while (error > tol && iter < maxIter) {
+            for (int i = 0; i < n; i++) {
+                double sum = 0;
+                for (int j = 0; j < n; j++) {
+                    if (j != i) {
+                        sum += A[i][j] * x[j];
+                    }
+                }
+                x_new[i] = (b[i] - sum) / A[i][i];
+            }
+        
+            error = 0;
+            for (int i = 0; i < n; i++) {
+                error = Math.max(error, Math.abs(x_new[i] - x[i]));
+            }
+        
+            for (int i = 0; i < n; i++) {
+                x[i] = x_new[i];
+            }
+        
+            iter++;
+        }
+    
+        if (iter == maxIter) {
+            System.out.println("El método no convergió después de " + maxIter + " iteraciones.");
+        }
+    
+        return x;
+    }
+
+    public static void main(String[] args) {
+        double[][] A = {{10, 2, 1}, {1, 5, 1}, {2, 3, 10}}; // Matriz de coeficientes
+        double[] b = {7, -8, 6}; // Vector de términos constantes
+        double tol = 1e-6; // Tolerancia
+        int maxIter = 1000; // Máximo número de iteraciones
+    
+        double[] x = gaussSeidel(A, b, tol, maxIter);
+    
+        System.out.println("La solución del sistema es:");
+        for (int i = 0; i < x.length; i++) {
+            System.out.println("x[" + i + "] = " + x[i]);
+        }
+    }
+}
+```
+
 ### Caso de prueba
+
+Valores de entrada
+```
+A = [
+  [10, 2, 1],
+  [1, 5, 1],
+  [2, 3, 10]
+]
+
+b = [7, -8, 6]
+
+```
+
+Salida esperada
+```
+x[0] ≈ 0.499979
+x[1] ≈ -1.600009
+x[2] ≈ 0.799994
+
+```
+
 ### Codigos
 
 ## Metodo de Jacobi
 
 ### Algoritmo
 ### Pseudocódigo
+
+```
+```
+
 ### Codigo en Java
+
+```java
+```
+
 ### Caso de prueba
+
+```
+```
+
+
+```
+```
+
 ### Codigos
