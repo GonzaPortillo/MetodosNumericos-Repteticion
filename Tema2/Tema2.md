@@ -58,7 +58,14 @@ Función Biseccion(a, b, tolerancia, maxIteraciones):
 
 ### Bisección
 
-Ejemplo de salida del codigo
+**Función objetivo:**
+
+```java
+f(x) = x^3 - x - 2
+```
+
+Salida esperada
+
 ```plaintext
 La raíz encontrada es: 1.521380
 ```
