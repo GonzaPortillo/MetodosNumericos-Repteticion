@@ -16,7 +16,19 @@ Algunos de estos metodos son:
 
 ### Algoritmo
 
-
+1. Definir la función `f(x)` que se desea integrar.
+2. Elegir el número de subintervalos `n`, asegurando que **n sea par**.
+3. Calcular el paso de integración:  
+   `h = (b - a) / n`
+4. Inicializar la suma:  
+   `suma = f(a) + f(b)`
+5. Para cada `i` impar entre 1 y `n - 1`:
+   - Agregar `4 * f(a + i * h)` a la suma.
+6. Para cada `i` par entre 2 y `n - 2`:
+   - Agregar `2 * f(a + i * h)` a la suma.
+7. Calcular el valor aproximado de la integral:  
+   `resultado = (h / 3) * suma`
+8. Mostrar el resultado.
 
 ### Pseudocódigo
 
