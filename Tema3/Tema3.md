@@ -137,6 +137,12 @@ x3 = -1.0
 
 ### Codigos
 
+1. [Ejemplo 1](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema3/Eliminacion%20Gausiana/Ejemplo1.java)
+2. [Ejemplo 2](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema3/Eliminacion%20Gausiana/Ejemplo2.java)
+3. [Ejemplo 3](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema3/Eliminacion%20Gausiana/Ejemplo3.java)
+4. [Ejemplo 4](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema3/Eliminacion%20Gausiana/Ejemplo4.java)
+5. [Ejemplo 5](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema3/Eliminacion%20Gausiana/Ejemplo5.java)
+
 ## Gauss Jordan
 
 ### Algoritmo
@@ -254,6 +260,12 @@ x3 = -1.0
 ```
 
 ### Codigos
+
+1. [Ejemplo 1](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema3/Gauss%20Jordan/Ejemplo1.java)
+2. [Ejemplo 2](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema3/Gauss%20Jordan/Ejemplo2.java)
+3. [Ejemplo 3](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema3/Gauss%20Jordan/Ejemplo3.java)
+4. [Ejemplo 4](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema3/Gauss%20Jordan/Ejemplo4.java)
+5. [Ejemplo 5](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema3/Gauss%20Jordan/Ejemplo5.java)
 
 ## Gauss Seidel
 
@@ -412,26 +424,136 @@ x[2] ≈ 0.799994
 
 ### Codigos
 
+1. [Ejemplo 1](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema3/Gauss%20Seidel/Ejemplo1.java)
+2. [Ejemplo 2](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema3/Gauss%20Seidel/Ejemplo2.java)
+3. [Ejemplo 3](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema3/Gauss%20Seidel/Ejemplo3.java)
+4. [Ejemplo 4](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema3/Gauss%20Seidel/Ejemplo4.java)
+5. [Ejemplo 5](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema3/Gauss%20Seidel/Ejemplo5.java)
+
 ## Metodo de Jacobi
 
 ### Algoritmo
+
+1. Inicializar:
+   - Obtener tamaño \( n \) de la matriz \( A \).
+   - Crear vector \( x \) con ceros.
+   - Crear vector auxiliar \( x_{\text{nuevo}} \).
+
+2. Para cada iteración desde 1 hasta el máximo:
+   - Para cada índice \( i \) desde 0 hasta \( n-1 \):
+     - Calcular suma:  
+       \[
+       \text{suma} = \sum_{\substack{j=0 \\ j \neq i}}^{n-1} A[i][j] \times x[j]
+       \]
+     - Actualizar nuevo valor:  
+       \[
+       x_{\text{nuevo}}[i] = \frac{b[i] - \text{suma}}{A[i][i]}
+       \]
+
+3. Copiar \( x_{\text{nuevo}} \) a \( x \).
+
+4. Repetir hasta completar todas las iteraciones.
+
+5. Retornar \( x \) como solución aproximada.
+
 ### Pseudocódigo
 
 ```
+Función Jacobi(A, b, iteraciones)
+    n ← longitud de A
+    x ← vector de tamaño n inicializado con 0
+    x_nuevo ← vector de tamaño n
+
+    Para iter desde 1 hasta iteraciones hacer:
+        Para i desde 0 hasta n-1 hacer:
+            suma ← 0
+            Para j desde 0 hasta n-1 hacer:
+                Si j ≠ i entonces
+                    suma ← suma + A[i][j] * x[j]
+            Fin Para
+
+            x_nuevo[i] ← (b[i] - suma) / A[i][i]
+        Fin Para
+
+        Para i desde 0 hasta n-1 hacer:
+            x[i] ← x_nuevo[i]
+        Fin Para
+    Fin Para
+
+    Retornar x
+Fin Función
 ```
 
 ### Codigo en Java
 
 ```java
+public class Jacobi {
+
+    public static double[] jacobi(double[][] A, double[] b, int iterations) {
+        int n = A.length;
+        double[] x = new double[n]; // Vector inicial
+        double[] x_new = new double[n]; // Vector para almacenar los nuevos valores
+    
+        for (int iter = 0; iter < iterations; iter++) {
+            for (int i = 0; i < n; i++) {
+                double sum = 0.0;
+                for (int j = 0; j < n; j++) {
+                    if (j != i) {
+                        sum += A[i][j] * x[j];
+                    }
+                }
+                x_new[i] = (b[i] - sum) / A[i][i];
+            }
+        
+            for (int i = 0; i < n; i++) {
+                x[i] = x_new[i];
+            }
+        }
+    
+        return x;
+    }
+
+    public static void main(String[] args) {
+        double[][] A = {{4, -1, 0}, {-1, 4, -1}, {0, -1, 3}};
+        double[] b = {5, -10, 5};
+    
+        int iterations = 50;
+    
+        double[] solution = jacobi(A, b, iterations);
+    
+        System.out.println("La solución al sistema de ecuaciones es:");
+        for (int i = 0; i < solution.length; i++) {
+            System.out.println("x[" + i + "] = " + solution[i]);
+        }
+    }
+}
 ```
 
 ### Caso de prueba
 
 ```
+A = [
+  [4, -1, 0],
+  [-1, 4, -1],
+  [0, -1, 3]
+]
+
+b = [5, -10, 5]
 ```
 
+Salida esperada
 
 ```
+La solución al sistema de ecuaciones es:
+x[0] = 2.9997
+x[1] = -4.9995
+x[2] = 3.9997
 ```
 
 ### Codigos
+
+1. [Ejemplo 1](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema3/Metodo%20de%20Jacobi/Ejemplo1.java)
+2. [Ejemplo 2](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema3/Metodo%20de%20Jacobi/Ejemplo2.java)
+3. [Ejemplo 3](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema3/Metodo%20de%20Jacobi/Ejemplo3.java)
+4. [Ejemplo 4](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema3/Metodo%20de%20Jacobi/Ejemplo4.java)
+5. [Ejemplo 5](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema3/Metodo%20de%20Jacobi/Ejemplo5.java)
