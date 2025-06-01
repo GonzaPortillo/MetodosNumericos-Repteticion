@@ -29,21 +29,25 @@ Los metodos que veremos en esta ocacion son:
              \[
              a_{k,j} = a_{k,j} - \text{factor} \times a_{i,j}
              \]
+             
 3. **Inicializar** un vector solución con tamaño igual al número de incógnitas.
 4. **Para** cada fila \( i \) desde la última hasta la primera (en orden inverso):
     1. Asignar el término independiente como valor inicial para \( x_i \):  
        \[
        x_i = a_{i,n}
        \]
-    2. **Para** cada columna \( j \) desde \( i+1 \) hasta el número de incógnitas:
+
+    3. **Para** cada columna \( j \) desde \( i+1 \) hasta el número de incógnitas:
        - Restar el producto de los coeficientes y soluciones ya calculadas:  
          \[
          x_i = x_i - a_{i,j} \times x_j
          \]
-    3. Dividir por el coeficiente diagonal para despejar \( x_i \):  
+   
+    4. Dividir por el coeficiente diagonal para despejar \( x_i \):  
        \[
        x_i = \frac{x_i}{a_{i,i}}
        \]
+    
 5. **Retornar** el vector solución con los valores de las incógnitas.
 
 ### Pseudocódigo
