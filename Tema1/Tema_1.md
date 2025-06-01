@@ -18,15 +18,6 @@ Entre los errores más comunes se encuentran:
 
 ## Algoritmos
 
-### Error Absoluto
-Este algoritmo calcula qué tanto difiere un valor aproximado de su valor real.
-#### Pasos:
-
-1. Leer el valor real (VR).
-2. Leer el valor aproximado (VA).
-3. Calcular la diferencia absoluta: |VR - VA|.
-4. El resultado es el error absoluto.
-
 ### Error Relativo
 Este algoritmo compara el error absoluto con respecto al valor real, útil cuando se trabaja con magnitudes muy diferentes.
 #### Pasos:
@@ -69,3 +60,166 @@ Este algoritmo calcula el promedio de los errores al cuadrado entre varios valor
      - Sumarlo a la variable acumuladora.
 5. Dividir la suma total entre el número de elementos.
 6. El resultado es el MSE (error cuadrático medio).
+
+## Error Absoluto
+
+### Algoritmo
+
+1. Tener una lista de pares de valores `[valor real, valor aproximado]`.
+2. Inicializar una lista vacía `errores`.
+3. Recorrer cada par:
+   - Calcular el error absoluto: `|valor real - valor aproximado|`
+   - Agregar el resultado a la lista `errores`.
+4. Retornar la lista de errores absolutos.
+
+
+### Pseudocodigo
+
+```plaintext
+Función calcularErrorAbsoluto(valores):
+    errores ← lista vacía
+
+    Para cada par en valores:
+        vr ← par[0]
+        va ← par[1]
+        error ← valor absoluto de (vr - va)
+        Agregar error a errores
+
+    Retornar errores
+```
+
+### Codigo en Java
+
+```java
+import java.util.ArrayList;
+
+public class Main {
+    public static ArrayList<Double> calcularErrorAbsoluto(double[][] valores) {
+        ArrayList<Double> errores = new ArrayList<>();
+        for (double[] par : valores) {
+            double vr = par[0];
+            double va = par[1];
+            errores.add(Math.abs(vr - va));
+        }
+        return errores;
+    }
+
+    public static void main(String[] args) {
+        double[][] datos = {
+            {120, 118},
+            {85, 83},
+            {95, 92}
+        };
+
+        System.out.println(calcularErrorAbsoluto(datos));
+    }
+}
+```
+
+### Caso de Prueba
+
+Entrada
+```
+{120, 118}
+{85, 83}
+{95, 92}
+```
+
+Salida esperada
+
+```
+[2.0, 2.0, 3.0]
+```
+
+## Error Cuadratico Medio
+
+### Algoritmo
+
+1. Tener dos arreglos del mismo tamaño: uno con los valores reales y otro con los valores predichos.
+2. Inicializar una variable `sumaError` en 0.
+3. Recorrer ambos arreglos al mismo tiempo:
+   - Restar el valor predicho del valor real.
+   - Elevar al cuadrado el resultado.
+   - Sumar el cuadrado del error a `sumaError`.
+4. Dividir `sumaError` entre el número de elementos para obtener el MSE.
+5. Retornar el MSE.
+
+### Pseudocódigo
+
+```
+Función calcularMSE(reales, predichos):
+    sumaError ← 0
+    n ← longitud de reales
+
+    Para i desde 0 hasta n - 1:
+        error ← reales[i] - predichos[i]
+        sumaError ← sumaError + (error)^2
+
+    mse ← sumaError / n
+    Retornar mse
+```
+
+### Codigo en Java
+
+```java
+public class MSEEjemplo1 {
+  
+    public static void main(String[] args) {
+        int[] reales = {1, 2, 3, 4, 5};
+        int[] predichos = {1, 2, 2, 4, 6};
+        double mse = calcularMSE(reales, predichos);
+        System.out.println("MSE: " + mse);
+    }
+
+    public static double calcularMSE(int[] reales, int[] predichos) {
+        double sumaError = 0.0;
+        int n = reales.length;
+        for (int i = 0; i < n; i++) {
+            sumaError += Math.pow(reales[i] - predichos[i], 2);
+        }
+        return sumaError / n;
+    }
+}
+
+```
+
+### Caso de prueba
+
+Entrada
+
+```
+Reales:    [1, 2, 3, 4, 5]
+Predichos: [1, 2, 2, 4, 6]
+```
+
+Salida esperada
+
+```
+MSE: 0.4
+```
+
+### Codigos
+
+## Error Relativo
+
+### Algoritmo
+### Pseudocódigo
+### Codigo en Java
+### Caso de prueba
+### Codigos
+
+## Error de Redondeo
+
+### Algoritmo
+### Pseudocódigo
+### Codigo en Java
+### Caso de prueba
+### Codigos
+
+## Error de Truncamiento
+
+### Algoritmo
+### Pseudocódigo
+### Codigo en Java
+### Caso de prueba
+### Codigos
