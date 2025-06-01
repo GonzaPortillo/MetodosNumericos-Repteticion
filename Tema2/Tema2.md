@@ -96,7 +96,7 @@ public class Problema_1 {
         double raiz = biseccion(a, b, tolerancia, maxIteraciones);
         
         if (!Double.isNaN(raiz)) {
-            System.out.printf("La raíz encontrada es: %.6f\n", raiz);
+            System.out.printf("La raíz encontrada es: %.2f\n", raiz);
         } else {
             System.out.println("No se encontró una raíz en el intervalo dado.");
         }
@@ -116,7 +116,7 @@ f(x) = x^3 - x - 2
 Salida esperada
 
 ```plaintext
-La raíz encontrada es: 1.521380
+La raíz encontrada es: 1.52
 ```
 
 ### Codigos
@@ -157,16 +157,6 @@ La raíz encontrada es: 1.521380
 
 ---
 
-### 🧪 Ejemplo
-
-- `f(x) = x³ - x - 2`  
-- `f'(x) = 3x² - 1`  
-- `x0 = 1.5`  
-- `tolerancia = 1e-6`  
-- `maxIteraciones = 100`
-
-
-
 ### Pseudocódigo
 
 ```plaintext
@@ -191,7 +181,47 @@ Retornar x1
 ```
 
 ### Codigo en Java
+
+```plaintext
+public class Newton2 {
+    public static double f(double x) {
+        return x * x - 4;
+    }
+
+    public static double df(double x) {
+        return 2 * x;
+    }
+
+    public static void main(String[] args) {
+        double x = 3.0;
+        double tol = 1e-6;
+        int maxIter = 100;
+
+        for (int i = 0; i < maxIter; i++) {
+            double fx = f(x), dfx = df(x);
+            if (Math.abs(fx) < tol) break;
+            x = x - fx / dfx;
+        }
+
+        System.out.printf("Raíz aproximada: %.2f\n", x);  // ≈ 2
+    }
+}
+```
+
 ### Caso de prueba
+
+**Función objetivo:**
+
+```plaintext
+f(x) = x^2 - 4
+```
+
+Salida esperada
+
+```plaintext
+Raíz aproximada: 2.00
+```
+
 ### Codigos
 
 1. [Ejemplo 1](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema2/Newtom%20Raphson/Ejemplo_1.java)
