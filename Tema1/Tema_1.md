@@ -260,15 +260,88 @@ Errores Relativos: [0.03, 0.024, 0.054]
 ## Error de Redondeo
 
 ### Algoritmo
+
+
+1. Tener una lista de **valores reales**.
+2. Para cada valor:
+   - Redondear el número a cierto número de decimales (por ejemplo, 2).
+   - Calcular el error como:  
+     `error = |valor_real - valor_redondeado|`
+   - Guardar el error en una lista.
+3. Mostrar todos los errores de redondeo.
+
 ### Pseudocódigo
+
+```plaintext
+Función calcularErroresRedondeo(valores, decimales):
+    errores ← lista vacía
+
+    Para cada valor en valores:
+        valor_redondeado ← redondear(valor, decimales)
+        error ← |valor - valor_redondeado|
+        Agregar error a errores
+
+    Retornar errores
+
+```
+
 ### Codigo en Java
+
+```java
+import java.util.ArrayList;
+
+public class ErrorRedondeo {
+    public static void main(String[] args) {
+        double[] valores = {3.14159, 2.71828, 1.61803};
+        int decimales = 2;
+
+        ArrayList<Double> errores = new ArrayList<>();
+
+        for (double valor : valores) {
+            double valorRedondeado = Math.round(valor * Math.pow(10, decimales)) / Math.pow(10, decimales);
+            double error = Math.abs(valor - valorRedondeado);
+            errores.add(error);
+        }
+
+        System.out.println("Errores de Redondeo: " + errores);
+    }
+}
+```
+
 ### Caso de prueba
+
+Valores de entrada
+```
+Valores reales: [3.14159, 2.71828, 1.61803]
+Número de decimales: 2
+```
+
+Salida esperada
+```
+Errores de Redondeo: [0.0015, 0.0017, 0.0019]
+```
+
 ### Codigos
 
 ## Error de Truncamiento
 
 ### Algoritmo
 ### Pseudocódigo
+
+```
+```
+
 ### Codigo en Java
+
+```java
+```
+
 ### Caso de prueba
+
+```
+```
+
+```
+```
+
 ### Codigos
