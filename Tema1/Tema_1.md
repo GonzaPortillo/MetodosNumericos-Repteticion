@@ -10,11 +10,12 @@ A diferencia de los métodos analíticos, que buscan una solución exacta en for
 
 Entre los errores más comunes se encuentran:
 
-- Error absoluto: Es la diferencia directa entre el valor real (verdadero) y el valor aproximado.
-- Error relativo: Representa el error absoluto en proporción al valor real. Es útil para comparar errores en magnitudes diferentes.
-- Error de redondeo: Ocurre al limitar el número de cifras decimales que se pueden representar o usar en un cálculo. Este tipo de error es inherente al uso de números finitos en computadoras.
-- Error de truncamiento: Aparece cuando se interrumpe un proceso infinito, como una serie numérica, después de un número finito de términos. Es común al usar aproximaciones como series de Taylor o métodos iterativos.
-- Error cuadrático medio (MSE): Se utiliza principalmente para evaluar el rendimiento global de un conjunto de estimaciones en relación con los valores reales. Es común en estadística, machine learning y simulaciones numéricas.
+- [***Error absoluto***](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema1/Tema_1.md#error-absoluto): Es la diferencia directa entre el valor real (verdadero) y el valor aproximado.
+- ***Error cuadrático medio (MSE)***: Se utiliza principalmente para evaluar el rendimiento global de un conjunto de estimaciones en relación con los valores reales. Es común en estadística, machine learning y simulaciones numéricas.
+- [***Error relativo***]: Representa el error absoluto en proporción al valor real. Es útil para comparar errores en magnitudes diferentes.
+- ***Error de redondeo***: Ocurre al limitar el número de cifras decimales que se pueden representar o usar en un cálculo. Este tipo de error es inherente al uso de números finitos en computadoras.
+- ***Error de truncamiento***: Aparece cuando se interrumpe un proceso infinito, como una serie numérica, después de un número finito de términos. Es común al usar aproximaciones como series de Taylor o métodos iterativos.
+
 
 ## Algoritmos
 
@@ -189,9 +190,71 @@ MSE: 0.4
 ## Error Relativo
 
 ### Algoritmo
+
+1. Tener una lista de pares `(valor_real, valor_aproximado)`.
+2. Para cada par:
+   - Restar el valor aproximado al valor real.
+   - Tomar el valor absoluto del error.
+   - Dividir ese valor entre el valor real.
+   - Almacenar el resultado como el **error relativo**.
+3. Mostrar todos los errores relativos.
+
 ### Pseudocódigo
+
+```
+Función calcularErroresRelativos(valores):
+    errores ← lista vacía
+
+    Para cada par en valores:
+        vr ← par[0]
+        va ← par[1]
+        error ← |(vr - va) / vr|
+        Agregar error a errores
+
+    Retornar errores
+```
+
 ### Codigo en Java
+
+```java
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        double[][] valores = {
+            {30, 29},
+            {42, 41},
+            {55, 52}
+        };
+
+        ArrayList<Double> errores = new ArrayList<>();
+        for (double[] par : valores) {
+            double vr = par[0];
+            double va = par[1];
+            double error = Math.abs((vr - va) / vr);
+            errores.add(error);
+        }
+
+        System.out.println("Errores Relativos: " + errores);
+    }
+}
+```
+
 ### Caso de prueba
+
+Valores de entrada
+```
+Valores:
+(30, 29)
+(42, 41)
+(55, 52)
+```
+
+Salida esperada
+```
+Errores Relativos: [0.03, 0.024, 0.054]
+```
+
 ### Codigos
 
 ## Error de Redondeo
