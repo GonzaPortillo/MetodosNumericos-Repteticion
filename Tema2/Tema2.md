@@ -130,7 +130,66 @@ La raíz encontrada es: 1.521380
 ## Newton Raphson
 
 ### Algoritmo
+
+1. **Definir la función** `f(x)` de la cual se desea encontrar una raíz.
+2. **Calcular la derivada** `f'(x)` de la función.
+3. **Elegir un valor inicial** `x₀` cercano a la raíz esperada.
+4. **Establecer una tolerancia** `ε`, por ejemplo `1e-6`, que indica la precisión deseada.
+5. **Establecer un número máximo de iteraciones** `maxIteraciones` para evitar ciclos infinitos.
+6. **Repetir mientras no se alcance la tolerancia y no se superen las iteraciones máximas:**
+    1. Evaluar `f(x₀)` y `f'(x₀)`.
+    2. Si `f'(x₀) == 0`, detener el algoritmo:
+    3. Calcular el nuevo valor:
+       ```
+       x₁ = x₀ - f(x₀) / f'(x₀)
+       ```
+    4. Verificar si se cumple:
+       ```
+       |x₁ - x₀| < tolerancia
+       ```
+       Si es verdadero, entonces `x₁` es una raíz aproximada.
+    5. Si no se cumple, actualizar:
+       ```
+       x₀ = x₁
+       ```
+    6. Incrementar el contador de iteraciones.
+7. **Si se alcanza el número máximo de iteraciones sin cumplir la condición de tolerancia:**
+
+---
+
+### 🧪 Ejemplo
+
+- `f(x) = x³ - x - 2`  
+- `f'(x) = 3x² - 1`  
+- `x0 = 1.5`  
+- `tolerancia = 1e-6`  
+- `maxIteraciones = 100`
+
+
+
 ### Pseudocódigo
+
+```plaintext
+Repetir mientras iter < maxIteraciones:
+    fx ← f(x0)
+    fpx ← fPrima(x0)
+
+    Si fpx == 0:
+        Mostrar "Derivada cero. Método falló."
+        Retornar NaN
+
+    x1 ← x0 - fx / fpx
+
+    Si |x1 - x0| < tolerancia:
+        Retornar x1
+
+    x0 ← x1
+    iter ← iter + 1
+
+Mostrar "No se encontró la raíz en el número máximo de iteraciones"
+Retornar x1
+```
+
 ### Codigo en Java
 ### Caso de prueba
 ### Codigos
