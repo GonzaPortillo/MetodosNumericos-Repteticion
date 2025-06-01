@@ -1,10 +1,22 @@
-public class Main {
-    public static void main(String[] args) {
-        double valorReal = 100.0;
-        double valorAproximado = 98.5;
+import java.util.ArrayList;
 
-        double errorRelativo = Math.abs((valorReal - valorAproximado) / valorReal);
-        System.out.printf("Error Relativo: %.4f%n", errorRelativo);
+public class Ejemplo1 {
+
+    public static ArrayList<Double> calcularErrorRedondeo(double[] valores, int decimales) {
+        ArrayList<Double> errores = new ArrayList<>();
+        double factor = Math.pow(10, decimales);
+
+        for (double valor : valores) {
+            double valorRedondeado = Math.round(valor * factor) / factor;
+            double error = Math.abs(valor - valorRedondeado);
+            errores.add(error);
+        }
+        return errores;
+    }
+
+    public static void main(String[] args) {
+        double[] valores = {3.14159, 2.71828, 1.61803};
+        int decimales = 2;
+        System.out.println("Ejemplo 1 - Errores de Redondeo: " + calcularErrorRedondeo(valores, decimales));
     }
 }
-
