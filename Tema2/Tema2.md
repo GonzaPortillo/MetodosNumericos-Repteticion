@@ -12,7 +12,7 @@ En este proyecto se abordan los siguientes métodos numéricos para encontrar ra
 
 - [**Newton-Raphson**](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema2/Tema2.md#newton-raphson): Método muy eficiente que requiere la derivada de la función. A partir de una aproximación inicial, utiliza la pendiente de la tangente para aproximarse rápidamente a la raíz.
 
-- - [**Punto Fijo**](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema2/Tema2.md#punto-fijo): Reescribe la ecuación en la forma \( x = g(x) \) y aplica iteraciones sucesivas para encontrar la raíz, siempre que se cumplan ciertas condiciones de convergencia.
+- [**Punto Fijo**](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema2/Tema2.md#punto-fijo): Reescribe la ecuación en la forma \( x = g(x) \) y aplica iteraciones sucesivas para encontrar la raíz, siempre que se cumplan ciertas condiciones de convergencia.
 
 - **Regla Falsa (Falsa Posición)**: Utiliza una interpolación lineal entre los extremos del intervalo para estimar la raíz, permitiendo una convergencia más rápida que la bisección en ciertos casos.
 
