@@ -1,24 +1,25 @@
-public class ReglaFalsa5 {
+public class NewtonCosX {
     public static double f(double x) {
-        return Math.log(x) + x;
+        return Math.cos(x) - x;
+    }
+
+    public static double df(double x) {
+        return -Math.sin(x) - 1;
     }
 
     public static void main(String[] args) {
-        double a = 0.1, b = 1, tol = 1e-6;
-        int maxIter = 100;
-        double fa = f(a), fb = f(b), c = a;
+        double x = 1.0;              // Valor inicial
+        double tol = 1e-6;           // Tolerancia
+        int maxIter = 100;           // Máximo de iteraciones
 
         for (int i = 0; i < maxIter; i++) {
-            c = b - fb * (b - a) / (fb - fa);
-            double fc = f(c);
-            if (Math.abs(fc) < tol) break;
-            if (fa * fc < 0) {
-                b = c; fb = fc;
-            } else {
-                a = c; fa = fc;
-            }
+            double fx = f(x), dfx = df(x);
+
+            if (Math.abs(fx) < tol) break;
+
+            x = x - fx / dfx;
         }
 
-        System.out.printf("Raíz aproximada: %.6f\n", c);
+        System.out.printf("Raíz aproximada: %.6f\n", x);  // ≈ 0.739085
     }
 }
