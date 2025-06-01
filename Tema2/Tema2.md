@@ -2,7 +2,17 @@
 
 # Métodos de Solución de Ecuaciones
 
-# Introducción
+## Indice
+
+- [Introduccion]()
+- [Biseccion]()
+  - [Algoritmo]()
+  - [Pseudocodigo]()
+  - [Codigo en Java]()
+  - [Caso de prueba]()
+  - [Codigos]()
+
+## Introducción
 
 Los **métodos de solución de ecuaciones** son técnicas numéricas utilizadas para encontrar los valores de las variables que satisfacen una ecuación dada, es decir, los **valores que hacen que una función se anule** (raíces de la función). Estos métodos resultan útiles cuando no es posible resolver una ecuación de forma analítica o exacta. Dependiendo del tipo de función y del comportamiento de la raíz, se pueden aplicar distintos enfoques para obtener una solución aproximada con un margen de error aceptable.
 
@@ -106,8 +116,6 @@ public class Problema_1 {
 ```
 
 ### Caso de prueba
-
-### Bisección
 
 **Función objetivo:**
 
