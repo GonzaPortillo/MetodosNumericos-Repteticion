@@ -12,7 +12,7 @@ Entre los errores más comunes se encuentran:
 
 - [**Error absoluto**](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema1/Tema_1.md#error-absoluto): Es la diferencia directa entre el valor real (verdadero) y el valor aproximado.
 - [**Error cuadrático medio (MSE)**](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema1/Tema_1.md#error-cuadratico-medio): Se utiliza principalmente para evaluar el rendimiento global de un conjunto de estimaciones en relación con los valores reales. Es común en estadística, machine learning y simulaciones numéricas.
-- [***Error relativo***]: Representa el error absoluto en proporción al valor real. Es útil para comparar errores en magnitudes diferentes.
+- [***Error relativo***](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema1/Tema_1.md#error-relativo-1): Representa el error absoluto en proporción al valor real. Es útil para comparar errores en magnitudes diferentes.
 - ***Error de redondeo***: Ocurre al limitar el número de cifras decimales que se pueden representar o usar en un cálculo. Este tipo de error es inherente al uso de números finitos en computadoras.
 - ***Error de truncamiento***: Aparece cuando se interrumpe un proceso infinito, como una serie numérica, después de un número finito de términos. Es común al usar aproximaciones como series de Taylor o métodos iterativos.
 
