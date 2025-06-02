@@ -88,11 +88,11 @@ Precio estimado para 0.75 kg de manzanas: $2.15
 
 ### Codigos
 
-1. [Ejemplo 1]()
-2. [Ejemplo 2]()
-3. [Ejemplo 3]()
-4. [Ejemplo 4]()
-5. [Ejemplo 5]()
+1. [Ejemplo 1](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema5/Interpolacion%20Lineal/Ejemplo1.java)
+2. [Ejemplo 2](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema5/Interpolacion%20Lineal/Ejemplo2.java)
+3. [Ejemplo 3](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema5/Interpolacion%20Lineal/Ejemplo3.java)
+4. [Ejemplo 4](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema5/Interpolacion%20Lineal/Ejemplo4.java)
+5. [Ejemplo 5](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema5/Interpolacion%20Lineal/Ejemplo5.java)
 
 ## Interpolacion Polinomica
 
@@ -178,11 +178,11 @@ Problema 1: P(1.5) = 2.250
 
 ### Codigos
 
-1. [Ejemplo 1]()
-2. [Ejemplo 2]()
-3. [Ejemplo 3]()
-4. [Ejemplo 4]()
-5. [Ejemplo 5]()
+1. [Ejemplo 1](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema5/Interpoliacion%20Polinomica/Ejemplo1.java)
+2. [Ejemplo 2](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema5/Interpoliacion%20Polinomica/Ejemplo2.java)
+3. [Ejemplo 3](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema5/Interpoliacion%20Polinomica/Ejemplo3.java)
+4. [Ejemplo 4](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema5/Interpoliacion%20Polinomica/Ejemplo4.java)
+5. [Ejemplo 5](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema5/Interpoliacion%20Polinomica/Ejemplo5.java)
 
 ## Metodo de Correlacion
 
@@ -302,11 +302,11 @@ Problema 2 (Newton): P(1.5) = 2.250
 
 ### Codigos
 
-1. [Ejemplo 1]()
-2. [Ejemplo 2]()
-3. [Ejemplo 3]()
-4. [Ejemplo 4]()
-5. [Ejemplo 5]()
+1. [Ejemplo 1](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema5/Metodo%20de%20Correlacion/Ejemplo1.java)
+2. [Ejemplo 2](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema5/Metodo%20de%20Correlacion/Ejemplo2.java)
+3. [Ejemplo 3](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema5/Metodo%20de%20Correlacion/Ejemplo3.java)
+4. [Ejemplo 4](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema5/Metodo%20de%20Correlacion/Ejemplo4.java)
+5. [Ejemplo 5](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema5/Metodo%20de%20Correlacion/Ejemplo5.java)
 
 ## Metodo de minimos cuadrados
 
@@ -390,11 +390,11 @@ y = 0.60x + 2.20
 
 ### Codigos
 
-1. [Ejemplo 1]()
-2. [Ejemplo 2]()
-3. [Ejemplo 3]()
-4. [Ejemplo 4]()
-5. [Ejemplo 5]()
+1. [Ejemplo 1](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema5/Metodo%20de%20minimos%20cuadrados/Ejemplo1.java)
+2. [Ejemplo 2](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema5/Metodo%20de%20minimos%20cuadrados/Ejemplo2.java)
+3. [Ejemplo 3](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema5/Metodo%20de%20minimos%20cuadrados/Ejemplo3.java)
+4. [Ejemplo 4](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema5/Metodo%20de%20minimos%20cuadrados/Ejemplo4.java)
+5. [Ejemplo 5](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema5/Metodo%20de%20minimos%20cuadrados/Ejemplo5.java)
 
 ## Metodo de regresion
 
@@ -477,9 +477,9 @@ y = 0.333 + 1.500x
 
 ### Codigos
 
-1. [Ejemplo 1]()
-2. [Ejemplo 2]()
-3. [Ejemplo 3]()
-4. [Ejemplo 4]()
-5. [Ejemplo 5]()
+1. [Ejemplo 1](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema5/Metodo%20de%20regresion/Ejemplo1.java)
+2. [Ejemplo 2](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema5/Metodo%20de%20regresion/Ejemplo2.java)
+3. [Ejemplo 3](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema5/Metodo%20de%20regresion/Ejemplo3.java)
+4. [Ejemplo 4](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema5/Metodo%20de%20regresion/Ejemplo4.java)
+5. [Ejemplo 5](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema5/Metodo%20de%20regresion/Ejemplo5.java)
 
