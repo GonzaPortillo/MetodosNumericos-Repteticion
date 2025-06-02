@@ -311,22 +311,80 @@ Problema 2 (Newton): P(1.5) = 2.250
 ## Metodo de minimos cuadrados
 
 ### Algoritmo
+
+1. Inicializar vectores x e y con los puntos conocidos.
+2. Calcular la longitud n del arreglo.
+3. Inicializar sumatorias: sumX, sumY, sumXY, sumX2 a 0.
+4. Recorrer los datos desde i = 0 hasta n - 1:
+   - sumX += x[i]
+   - sumY += y[i]
+   - sumXY += x[i] * y[i]
+   - sumX2 += x[i] * x[i]
+5. Calcular pendiente (m):
+   - m = (n * sumXY - sumX * sumY) / (n * sumX2 - sumX^2)
+6. Calcular ordenada al origen (b):
+   - b = (sumY - m * sumX) / n
+7. Imprimir la ecuación de la recta: y = mx + b
+
 ### Pseudocódigo
 
 ```
+Función mínimosCuadrados(x[], y[]):
+    n ← longitud(x)
+    sumX ← 0
+    sumY ← 0
+    sumXY ← 0
+    sumX2 ← 0
+
+    Para i ← 0 hasta n-1 hacer:
+        sumX ← sumX + x[i]
+        sumY ← sumY + y[i]
+        sumXY ← sumXY + x[i] * y[i]
+        sumX2 ← sumX2 + x[i] * x[i]
+
+    m ← (n * sumXY - sumX * sumY) / (n * sumX2 - sumX * sumX)
+    b ← (sumY - m * sumX) / n
+
+    Retornar m, b
 ```
 
 ### Codigo en Java
 
 ```java
+public class MinimosCuadrados {
+    public static void main(String[] args) {
+        double[] x = {1, 2, 3, 4, 5};
+        double[] y = {2, 4, 5, 4, 5};
+        int n = x.length;
+
+        double sumX = 0, sumY = 0, sumXY = 0, sumX2 = 0;
+
+        for (int i = 0; i < n; i++) {
+            sumX += x[i];
+            sumY += y[i];
+            sumXY += x[i] * y[i];
+            sumX2 += x[i] * x[i];
+        }
+
+        double m = (n * sumXY - sumX * sumY) / (n * sumX2 - sumX * sumX);
+        double b = (sumY - m * sumX) / n;
+
+        System.out.printf("Problema 1: y = %.2fx + %.2f%n", m, b);
+    }
+} 
 ```
 
 ### Caso de prueba
 
+Entrada:
 ```
+x = [1, 2, 3, 4, 5]
+y = [2, 4, 5, 4, 5]
 ```
 
+Salida esperada:
 ```
+y = 0.60x + 2.20
 ```
 
 
