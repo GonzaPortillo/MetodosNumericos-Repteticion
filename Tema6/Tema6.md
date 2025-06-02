@@ -101,11 +101,11 @@ Salida esperada
 
 ### Codigos
 
-1. [Ejemplo 1]()
-2. [Ejemplo 2]()
-3. [Ejemplo 3]()
-4. [Ejemplo 4]()
-5. [Ejemplo 5]()
+1. [Ejemplo 1](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema6/Euler/Ejemplo1.java)
+2. [Ejemplo 2](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema6/Euler/Ejemplo2.java)
+3. [Ejemplo 3](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema6/Euler/Ejemplo3.java)
+4. [Ejemplo 4](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema6/Euler/Ejemplo4.java)
+5. [Ejemplo 5](https://github.com/GonzaPortillo/MetodosNumericos-Repteticion/blob/main/Tema6/Euler/Ejemplo5.java)
 
 ## Runge Kutta
 
