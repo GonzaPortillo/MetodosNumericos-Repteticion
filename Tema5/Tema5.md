@@ -399,22 +399,80 @@ y = 0.60x + 2.20
 ## Metodo de regresion
 
 ### Algoritmo
+
+1. Inicializar los arreglos `x` y `y` con los datos conocidos.
+2. Determinar el número de puntos `n`.
+3. Inicializar las sumatorias: `sumX`, `sumY`, `sumXY`, `sumX2` en 0.
+4. Para cada i desde 0 hasta n - 1:
+   - sumX += x[i]
+   - sumY += y[i]
+   - sumXY += x[i] * y[i]
+   - sumX2 += x[i] * x[i]
+5. Calcular coeficiente `b`:
+   - b = (n * sumXY - sumX * sumY) / (n * sumX2 - sumX^2)
+6. Calcular coeficiente `a`:
+   - a = (sumY - b * sumX) / n
+7. Imprimir la ecuación: `y = a + bx`
+
 ### Pseudocódigo
 
 ```
+Función regresiónLineal(x[], y[]):
+    n ← longitud(x)
+    sumX ← 0
+    sumY ← 0
+    sumXY ← 0
+    sumX2 ← 0
+
+    Para i desde 0 hasta n - 1 hacer:
+        sumX ← sumX + x[i]
+        sumY ← sumY + y[i]
+        sumXY ← sumXY + x[i] * y[i]
+        sumX2 ← sumX2 + x[i] * x[i]
+
+    b ← (n * sumXY - sumX * sumY) / (n * sumX2 - sumX * sumX)
+    a ← (sumY - b * sumX) / n
+
+    Retornar a, b
 ```
 
 ### Codigo en Java
 
 ```java
+public class Main {
+    public static void main(String[] args) {
+        double[] x = {1, 2, 3};
+        double[] y = {2, 3, 5};
+        int n = x.length;
+
+        double sumX = 0, sumY = 0, sumXY = 0, sumX2 = 0;
+
+        for (int i = 0; i < n; i++) {
+            sumX += x[i];
+            sumY += y[i];
+            sumXY += x[i] * y[i];
+            sumX2 += x[i] * x[i];
+        }
+
+        double b = (n * sumXY - sumX * sumY) / (n * sumX2 - sumX * sumX);
+        double a = (sumY - b * sumX) / n;
+
+        System.out.printf("Problema 1: y = %.3f + %.3fx\n", a, b);
+    }
+}
 ```
 
 ### Caso de prueba
 
+Entrada:
 ```
+x = [1, 2, 3]  
+y = [2, 3, 5]
 ```
 
+Salida esperada:
 ```
+y = 0.333 + 1.500x
 ```
 
 ### Codigos
