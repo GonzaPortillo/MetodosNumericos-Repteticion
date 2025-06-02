@@ -125,6 +125,41 @@ retornar result
 ### Codigo en Java
 
 ```java
+public class Main {
+
+    // Método que aplica interpolación de Lagrange
+    public static double lagrange(double[] x, double[] y, double xEval) {
+        double result = 0;
+        int n = x.length;
+
+        for (int i = 0; i < n; i++) {
+            double term = y[i];
+            for (int j = 0; j < n; j++) {
+                if (j != i) {
+                    term *= (xEval - x[j]) / (x[i] - x[j]);
+                }
+            }
+            result += term;
+        }
+
+        return result;
+    }
+
+    public static void main(String[] args) {
+        // Coordenadas conocidas
+        double[] x = {0, 1, 2}; // Coordenadas x
+        double[] y = {1, 3, 2}; // Coordenadas y
+
+        // Punto a evaluar
+        double xEval = 1.5;
+
+        // Evaluación usando interpolación de Lagrange
+        double resultado = lagrange(x, y, xEval);
+
+        // Mostrar resultado
+        System.out.printf("Problema 1: P(%.1f) = %.3f\n", xEval, resultado);
+    }
+}
 ```
 
 ### Caso de prueba
@@ -152,9 +187,119 @@ Problema 1: P(1.5) = 2.250
 ## Metodo de Correlacion
 
 ### Algoritmo
+1. **Inicialización**:
+   - Recibir los vectores `x[]` y `y[]` de valores conocidos.
+   - Crear una tabla de diferencias divididas de tamaño `n x n`.
+
+2. **Llenado de la tabla**:
+   - La primera columna de la tabla es igual a `y[]`.
+   - Para cada columna \( j \) desde 1 hasta \( n - 1 \), calcular:
+     \[
+     tabla[i][j] = \frac{tabla[i+1][j-1] - tabla[i][j-1]}{x[i+j] - x[i]}
+     \]
+
+3. **Evaluación del polinomio**:
+   - Inicializar `resultado = tabla[0][0]`.
+   - Para cada término del polinomio, multiplicar sucesivamente \( (xEval - x[i]) \) y sumar el producto del coeficiente correspondiente.
+
 ### Pseudocódigo
+
+```
+Función diferenciasDivididas(x[], y[]):
+n ← longitud(x)
+Crear tabla[n][n]
+
+Para i ← 0 hasta n-1:
+    tabla[i][0] ← y[i]
+
+Para j ← 1 hasta n-1:
+    Para i ← 0 hasta n-j-1:
+        tabla[i][j] ← (tabla[i+1][j-1] - tabla[i][j-1]) / (x[i+j] - x[i])
+
+retornar tabla
+
+Función evaluarNewton(x[], tabla[][], xEval):
+resultado ← tabla[0][0]
+producto ← 1
+
+Para i ← 1 hasta n-1:
+    producto ← producto * (xEval - x[i-1])
+    resultado ← resultado + tabla[0][i] * producto
+
+retornar resultado
+```
+
 ### Codigo en Java
+
+```java
+public class Main {
+
+    // Método para calcular diferencias divididas
+    public static double[][] diferenciasDivididas(double[] x, double[] y) {
+        int n = x.length;
+        double[][] tabla = new double[n][n];
+
+        // Inicializar primera columna con los valores de y[]
+        for (int i = 0; i < n; i++) {
+            tabla[i][0] = y[i];
+        }
+
+        // Calcular las diferencias divididas
+        for (int j = 1; j < n; j++) {
+            for (int i = 0; i < n - j; i++) {
+                tabla[i][j] = (tabla[i + 1][j - 1] - tabla[i][j - 1]) / (x[i + j] - x[i]);
+            }
+        }
+
+        return tabla;
+    }
+
+    // Evaluar el polinomio de Newton en xEval
+    public static double evaluarNewton(double[] x, double[][] tabla, double xEval) {
+        double resultado = tabla[0][0];
+        double producto = 1;
+
+        for (int i = 1; i < x.length; i++) {
+            producto *= (xEval - x[i - 1]);
+            resultado += tabla[0][i] * producto;
+        }
+
+        return resultado;
+    }
+
+    public static void main(String[] args) {
+        // Puntos conocidos
+        double[] x = {0, 1, 2};
+        double[] y = {1, 3, 2};
+
+        // Punto a evaluar
+        double xEval = 1.5;
+
+        // Calcular tabla de diferencias divididas
+        double[][] tabla = diferenciasDivididas(x, y);
+
+        // Evaluar el polinomio en el punto deseado
+        double resultado = evaluarNewton(x, tabla, xEval);
+
+        // Mostrar resultado
+        System.out.printf("Problema 2 (Newton): P(%.1f) = %.3f\n", xEval, resultado);
+    }
+}
+```
+
 ### Caso de prueba
+Datos de entrada
+```
+x ← [0, 1, 2]
+y ← [1, 3, 2]
+xEval ← 1.5
+```
+
+Salida esperada
+```
+Problema 2 (Newton): P(1.5) = 2.250
+```
+
 ### Codigos
 
 1. [Ejemplo 1]()
@@ -167,8 +312,24 @@ Problema 1: P(1.5) = 2.250
 
 ### Algoritmo
 ### Pseudocódigo
+
+```
+```
+
 ### Codigo en Java
+
+```java
+```
+
 ### Caso de prueba
+
+```
+```
+
+```
+```
+
+
 ### Codigos
 
 1. [Ejemplo 1]()
@@ -181,8 +342,23 @@ Problema 1: P(1.5) = 2.250
 
 ### Algoritmo
 ### Pseudocódigo
+
+```
+```
+
 ### Codigo en Java
+
+```java
+```
+
 ### Caso de prueba
+
+```
+```
+
+```
+```
+
 ### Codigos
 
 1. [Ejemplo 1]()
